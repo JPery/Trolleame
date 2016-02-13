@@ -1,0 +1,122 @@
+legend {
+    color: white;
+    background: #FF6400;
+    font-weight: bold;
+}
+
+label {
+    color: #FF6400;
+    font-weight: bold;
+}
+
+.login {
+    border: 0;
+    margin: 0 60px 0 60px;
+    background: white;
+    padding-top: 10px;
+    float: left;
+}
+
+fieldset {
+    border-radius: 3px;
+    border: none;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    background: #FFF1E2;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    margin: 0 0 10px 0;
+    padding: 2px 2px;
+    border: 1px solid #ddd;
+    color: #303030;
+    display: block;
+}
+
+span {
+    color: #FF9400;
+    font-weight: normal;
+    font-size: 85%;
+    display: block;
+}
+
+input[type="checkbox"] {
+    display: grid;
+}
+
+input[type="submit"] {
+    border-radius: 3px;
+    border: none;
+    font-weight: bold;
+    margin: 4px 0;
+    padding: 2px 4px;
+    background-color: #FF6400;
+    color: #fff;
+}
+
+input[type="submit"]:hover {
+    background-color: #FFB300;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 125%;
+    color: #FF6400;
+    margin-top: 0;
+    margin-bottom: 3px;
+}
+
+.faq ul {
+    display: list-item;
+    list-style-type: disc;
+    font-weight: normal;
+    color: #FF6400;
+    font-weight: bold;
+}
+
+p {
+    font-weight: normal;
+    color: #303030;
+}
+
+.faq {
+    float: right;
+    width: 55%;
+    padding: 10px;
+}
+
+.formulario {
+    float: left;
+    width: 40%;
+    margin: 0;
+}
+
+h3 a {
+    color: #FF6400;
+    text-decoration: underline;
+    display: block;
+    width: 8em;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0.5em 1em;
+    border: 3px double #FFE2C5;
+    background: #FFF3E8;
+    font-weight: bold;
+    font-size: 125%;
+}
+
+h4 {
+    text-align: center;
+}
+
+h4 a {
+    font-size: 100%;
+    font-weight: bold;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    padding-bottom: 1px;
+    text-decoration: none;
+    color: #FF6400;
+}
