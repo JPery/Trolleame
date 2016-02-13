@@ -76,7 +76,7 @@ li a:hover:not(.active) {
 
 .img {
     position: relative;
-    margin: 5px 5px 0 30px;
+    margin: 4px 5px 0 28px;
     float: left;
     display: inline-block;
 }
@@ -232,8 +232,9 @@ a#logo {
 }
 
 .dropbtn {
-    height: 16px;
-    width: 2px;
+    height: 20px;
+    width: 10px;
+    resize: horizontal;
     background-color: #3c3c3c;
     color: white;
     border: none;
