@@ -138,3 +138,7 @@ input[type="submit"]:disabled:hover {
     color: #aaa;
     background: none;
 }
+
+.foot {
+    padding-right: 8px;
+}
