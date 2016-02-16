@@ -13,10 +13,6 @@ body {
     padding: 0;
 }
 
-a {
-    text-decoration: none;
-}
-
 .header-top {
     width: 100%;
     background-color: #3c3c3c;
@@ -36,41 +32,20 @@ li {
     float: left;
 }
 
-.header-top .formularios li a:hover:not(.active) {
-    background: none;
-    color: #f00;
-}
-
 .header-top .formularios,
 .formularios {
     float: right;
 }
 
-.header-top a:hover {
-    text-decoration: none;
-}
-
-.header-top ul li a {
-    font-size: 14px;
-    margin-right: 10px;
-}
-
-.header-top .formularios li {
+.formualarios li {
     position: relative;
-    margin-right: 10px;
-}
-
-.header-top .formularios li a {
-    font-size: 15px;
-    margin: 0;
 }
 
 li a {
-    font-size: 15px;
     padding-top: 1px;
     text-decoration: none;
     height: 27px;
-    margin: 0 0 0 10px;
+    margin: 0 10px 0 10px;
     color: #fff;
     display: inline-block;
 }
@@ -167,10 +142,11 @@ a#logo {
     white-space: nowrap;
     overflow: hidden;
     font-size: 15px;
-    padding: 0 0 0 10px;
+    padding: 0 0 0 20px;
 }
 
 .header-bottom ul {
+    display: inline-block;
     list-style-type: none;
     padding: 0;
     margin: 2px;
@@ -181,15 +157,9 @@ a#logo {
     list-style-type: none;
     float: left;
     line-height: 145%;
-    margin-right: 10px;
-}
-
-.header-bottom .formularios {
-    margin-top: 0;
 }
 
 .header-bottom ul li a {
-    font-size: 15px;
     display: inline-block;
     color: #FF6400;
     text-align: center;
@@ -235,24 +205,21 @@ a#logo {
 }
 
 .wrap {
-    background: white;
     margin-left: 5%;
     margin-right: 5%;
     padding-top: 2px;
-    max-width: 1300px;
+    max-width: 1200px;
     text-align: left;
     margin: auto;
     margin-top: 0;
 }
 
-.wrap a:hover {
-    text-decoration: underline;
-}
-
 .navlogo {
     height: 15px;
     width: 9px;
-    margin: 7px 4px 0 4px;
+    margin-left: 4px;
+    margin-top: 7px;
+    margin-right: 15px;
     float: left;
 }
 
@@ -270,7 +237,6 @@ a#logo {
 }
 
 .dropdown {
-    z-index: 999;
     display: block;
     float: left;
     position: absolute;
@@ -326,206 +292,12 @@ a#logo {
     opacity: 1;
 }
 
-.newswrap {
-    margin: 10px 4px 0 4px;
-    width: 70%;
-}
-
-.news-resumen {
-    margin: 0;
-    padding: 10px 0 10px 0;
-    position: relative;
-}
-
-.news {
-    padding-left: 95px;
-    padding-right: 5px;
-    overflow: hidden;
-}
-
-.news h2 {
-    margin: 0;
-    padding: 0 5px 0 0;
-    font-size: 140%;
-    font-weight: normal;
-    background: none;
-    border: none;
-}
-
-.meneos {
-    position: absolute;
-    position: absolute;
-    top: 10px;
-    left: 8px;
-    width: 67px;
-    height: 85px;
-    border: 1px solid #ffeed6;
-    font-size: 12px;
-    color: #ff6400;
-    text-align: center;
-    background-clip: padding-box;
-    border-radius: 3px;
-}
-
-.votos {
-    padding: 6px 0 6px;
-    border: 1px solid #FFF;
-    border-bottom: 0;
-    line-height: 1.2em;
-    background-repeat: repeat-x;
-    background-position: 0 -2px;
-    background-clip: padding-box;
-    border-radius: 3px 3px 0 0;
-}
-
-.votos a {
-    display: block;
-    color: #ff6400;
-    font-size: 18px;
-    text-decoration: none;
-}
-
-.vota {
-    position: relative;
-    left: -6px;
-    display: inline-block;
-    width: 78px;
-    border: 1px solid #ffc098;
-    background-color: #ff6400;
-}
-
-.vota a {
-    display: block;
-    padding: 2px 0;
-    height: 18px;
-    color: #FFF;
-    text-decoration: none;
-    border: 1px solid #FFF;
-    background: url('../img/back.png') repeat-x;
-}
-
-.clics {
-    padding: 1px 0 2px 0;
-    border: 1px solid #FFF;
-    border-top: 0;
-    font-size: 10px;
-    background-repeat: repeat-x;
-    background-position: bottom;
-    background-clip: padding-box;
-    border-radius: 0 0 3px 3px;
-}
-
-.meneos .votos,
-.meneos .clics {
-    background-image: url('../img/back2.png');
-}
-
-.miniatura img {
-    width: 60px;
-    height: 60px;
-    overflow: hidden;
-    float: right;
-    margin: 3px 3px 3px 5px;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
-    -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
-    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
-}
-
-.details {
-    padding: 0;
-    margin-top: 4px;
-    overflow: hidden;
-    white-space: normal;
-    color: #666;
-}
-
-.details a {
-    color: #666;
-    text-decoration: none;
-}
-
-.details a:hover {
-    text-decoration: underline;
-}
-
-.details .tool {
-    display: inline;
-    border-left: 1px solid;
-    padding: 0 4px 0 6px;
-    border-left-color: #666;
-}
-
-.details-main {
-    float: left;
-    margin-top: 6px;
-}
-
-.details-main .contadorcomentarios {
-    padding: 0 6px 0 0;
-    border-left: none;
-    font-size: 120%;
-}
-
-.contadorcomentarios a .contador {
-    text-decoration: none;
-    padding: 1px 4px;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 3px;
-    background-color: #ff6400;
-    font-size: 9pt;
-    color: white;
-}
-
-.contadorcomentarios a .contador {
-    display: inline;
-    line-height: 120%;
-    margin-right: 0.25em;
-}
-
-.contadorcomentarios a:hover .contador {
-    text-decoration: none;
-}
-
-.details-main .contadorcomentarios a:link,
-.details-main .contadorcomentarios a:visited {
-    color: #03a;
-}
-
-.details .RS {
-    margin-left: 0;
-    display: inline;
-    float: none;
-}
-
-.details .RS a {
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    margin: 0 2px;
-    padding: 0;
-    opacity: 0.6;
-    cursor: pointer;
-    vertical-align: text-top;
-    background-size: 20px 300px;
-}
-
-.details .RS a:hover {
-    opacity: 1;
-}
-
-.details .RS img {
-    height: 18px;
-    width: 18px;
-    resize: both;
-}
-
 .foot {
     list-style-type: none;
     background: url(../img/logos-common-2x.png) no-repeat;
     background-color: white;
     clear: both;
-    padding-left: 110px;
+    padding-left: 20px;
     overflow: auto;
 }
 
@@ -571,7 +343,8 @@ a#logo {
     text-decoration: underline;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 675px),
+only screen and (max-device-width: 675px) and (-webkit-min-device-pixel-ratio: 1) {
     .header-center {
         display: none;
     }
@@ -602,6 +375,7 @@ a#logo {
     .header-top li a {
         font-size: 15px;
         margin-top: 6px;
+        margin-right: 10px;
     }
     .wrap {
         padding: 0;
@@ -609,11 +383,5 @@ a#logo {
     .header-end .nav {
         border: 0;
         padding: 0 0 0 5px;
-    }
-    .newswrap {
-        width: 100%;
-    }
-    .wideonly {
-        display: none;
     }
 }

@@ -1,7 +1,12 @@
 legend {
-    color: white;
     background: #FF6400;
+}
+
+legend span {
+    color: white;
     font-weight: bold;
+    font-size: 110%;
+    margin: 0 0.2em 0 0.2em;
 }
 
 label {
@@ -10,10 +15,7 @@ label {
 }
 
 .login {
-    border: 0;
-    margin: 0 60px 0 60px;
     background: white;
-    padding-top: 10px;
     float: left;
 }
 
@@ -69,6 +71,9 @@ h3 {
 }
 
 .faq ul {
+    margin: 0;
+    padding: 0;
+    margin-left: 1.5em;
     display: list-item;
     list-style-type: disc;
     font-weight: normal;
@@ -76,7 +81,18 @@ h3 {
     font-weight: bold;
 }
 
+.faq ul li {
+    font-size: 100%;
+    float: initial;
+    color: #FF6400;
+}
+
+.faq ul p {
+    display: block;
+}
+
 p {
+    margin: 0;
     font-weight: normal;
     color: #303030;
 }
@@ -84,7 +100,7 @@ p {
 .faq {
     float: right;
     width: 55%;
-    padding: 10px;
+    margin-top: 10px;
 }
 
 .formulario {
@@ -104,7 +120,7 @@ h3 a {
     border: 3px double #FFE2C5;
     background: #FFF3E8;
     font-weight: bold;
-    font-size: 125%;
+    font-size: 100%;
 }
 
 h4 {
@@ -125,7 +141,7 @@ h4 a {
     padding-right: 8px;
 }
 
-@media only screen and (max-width: 675px) {
+@media only screen and (max-width: 800px) {
     .faq {
         display: none;
     }
