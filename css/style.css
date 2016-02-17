@@ -6,7 +6,7 @@ html {
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: small;
-    background-image: url('https://mnmstatic.net/v_40/img/common/bkg-01.png');
+    background-image: url('../img/bkg-01.png');
     color: #000;
     background-color: #fff;
     margin: 0;
@@ -17,10 +17,12 @@ a {
     text-decoration: none;
 }
 
-.header-top {
+#header-top {
+    position: fixed;
+    z-index: 890;
     width: 100%;
     background-color: #3c3c3c;
-    overflow: hidden;
+    overflow: visible;
 }
 
 li {
@@ -29,38 +31,38 @@ li {
     float: left;
 }
 
-.header-top ul {
+#header-top ul {
     list-style-type: none;
     margin: 2px 0 0 0;
     padding: 0;
     float: left;
 }
 
-.header-top .formularios li a:hover:not(.active) {
+#header-top .formularios li a:hover:not(.active) {
     background: none;
     color: #f00;
 }
 
-.header-top .formularios,
+#header-top .formularios,
 .formularios {
     float: right;
 }
 
-.header-top a:hover {
+#header-top a:hover {
     text-decoration: none;
 }
 
-.header-top ul li a {
+#header-top ul li a {
     font-size: 14px;
     margin-right: 10px;
 }
 
-.header-top .formularios li {
+#header-top .formularios li {
     position: relative;
     margin-right: 10px;
 }
 
-.header-top .formularios li a {
+#header-top .formularios li a {
     font-size: 15px;
     margin: 0;
 }
@@ -83,7 +85,8 @@ li a:hover:not(.active) {
     background: url('../img/nav-white.png') bottom left repeat-x;
 }
 
-.header-center {
+#header-center {
+    padding-top: 30px;
     height: 45px;
     background-color: #ccc;
     overflow: hidden;
@@ -112,7 +115,7 @@ a#logo {
     float: left;
 }
 
-.header-center a {
+#header-center a {
     padding-left: 15px;
     float: left;
     margin-top: 6px;
@@ -122,7 +125,7 @@ a#logo {
     text-decoration: none;
 }
 
-.header-center a:hover:not(.active) {
+#header-center a:hover:not(.active) {
     text-decoration: underline;
 }
 
@@ -141,26 +144,26 @@ a#logo {
     background: #fff url('../img/lupa.png') no-repeat 0 3px;
 }
 
-.searchdrop {
+#searchdrop {
+    margin-right: 10px;
     padding-top: 0px;
     padding: 1% 1%;
 }
 
-.searchdrop input {
+#searchdrop input {
     border-radius: 3px;
     border: 0px;
-    width: 140px;
-    height: 20px;
+    width: 130px;
+    height: 24px;
     font-size: 16px;
     padding-top: 0px;
     padding-left: 20px;
     margin: 10px;
     margin-left: 17px;
-    margin-top: 20px;
-    background: #fff url('../img/lupa.png') no-repeat 0 1px;
+    background: #fff url('../img/lupa.png') no-repeat 0 3px;
 }
 
-.header-bottom {
+#header-bottom {
     display: block;
     height: 30px;
     background-color: #ececec;
@@ -170,13 +173,13 @@ a#logo {
     padding: 0 0 0 10px;
 }
 
-.header-bottom ul {
+#header-bottom ul {
     list-style-type: none;
     padding: 0;
     margin: 2px;
 }
 
-.header-bottom ul li {
+#header-bottom ul li {
     display: inline-block;
     list-style-type: none;
     float: left;
@@ -184,11 +187,11 @@ a#logo {
     margin-right: 10px;
 }
 
-.header-bottom .formularios {
+#header-bottom .formularios {
     margin-top: 0;
 }
 
-.header-bottom ul li a {
+#header-bottom ul li a {
     font-size: 15px;
     display: inline-block;
     color: #FF6400;
@@ -197,52 +200,51 @@ a#logo {
     border-bottom: solid #ececec;
 }
 
-.header-bottom ul li a:hover:not(.active) {
+#header-bottom ul li a:hover:not(.active) {
     background: url('../img/nav-orange.png') bottom left repeat-x;
 }
 
-.header-bottom .active {
+#header-bottom .active {
     background: url('../img/nav-orange.png') bottom left repeat-x;
 }
 
-.header-end {
+#header-end {
     overflow: hidden;
     list-style-type: none;
-}
-
-.header-end .nav {
-    border-top: 2px solid white;
-    overflow: scroll;
+    padding-left: 25px;
+    height: 30px;
     background-color: white;
-    border-bottom: 1px solid white;
 }
 
-.header-end li a {
+#header-end li {
+    margin-right: 25px;
+    margin-top: 2px;
+    float: left
+}
+
+#header-end li a {
+    height: auto;
+    margin: 0;
     color: black;
     text-align: center;
-    padding: 3px 6px;
     text-decoration: none;
-    border-bottom: solid white;
 }
 
-.header-end li a:hover:not(.active3) {
-    background-color: white;
-    border-bottom: 3px solid black;
-}
-
-.header-end .active {
-    border-bottom: 3px solid black !important;
+#header-end li a:hover:not(.active),
+#header-end li a.active {
+    white-space: nowrap;
+    padding-bottom: 5px;
+    background: url('../img/nav-black.png') bottom left repeat-x;
 }
 
 .wrap {
     background: white;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin: auto;
     padding-top: 2px;
     max-width: 1300px;
     text-align: left;
-    margin: auto;
     margin-top: 0;
+    width: 99%;
 }
 
 .wrap a:hover {
@@ -256,7 +258,7 @@ a#logo {
     float: left;
 }
 
-.dropbtn {
+#dropbtn {
     height: 20px;
     width: 10px;
     resize: horizontal;
@@ -264,50 +266,57 @@ a#logo {
     color: white;
     border: none;
     cursor: pointer;
-    margin: 5px 5px 0 5px;
+    margin: 5px;
     display: inline-block;
     background: url('../img/icons-common2.png');
 }
 
-.dropdown {
-    z-index: 999;
+#dropdown {
+    z-index: 900;
     display: block;
     float: left;
     position: absolute;
 }
 
-.dropdown-content {
+#dropdown-content {
+    width: 200px;
     display: none;
-    position: absolute;
     background-color: #3c3c3c;
-    width: 220px;
-    height: 340px;
 }
 
-.dropdown-content a {
+#dropdown-content li a {
+    margin: 0;
     color: white;
     padding-left: 20px;
-    padding-bottom: 10px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown-content .active {
+#dropdown-content li a:hover {
+    background: none;
+}
+
+#dropdown-content .active {
     font-weight: bold;
     background: none;
 }
 
-.dropdown-content a:hover {
+#dropdown-content a:hover {
     display: block;
     font-weight: bold;
 }
 
-.dropdown:hover .dropdown-content {
+#dropdown:hover #dropdown-content {
     display: block;
 }
 
-.dropdown:hover .dropbtn {
+#dropdown:hover #dropbtn {
     background-color: #3c3c3c;
+}
+
+#dropdown-content li {
+    float: none;
+    list-style: none;
 }
 
 .RS {
@@ -328,7 +337,49 @@ a#logo {
 
 .newswrap {
     margin: 10px 4px 0 4px;
-    width: 70%;
+}
+
+#destacada {
+    position: relative;
+    background: #f9f9f9;
+    border: #ddd 1px solid;
+    padding: 5px 5px;
+    margin: 10px 0;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+#destacada h1 {
+    line-height: 100%;
+    font-size: 140%;
+    font-weight: normal;
+    margin: 0;
+}
+
+#destacada .footer {
+    position: absolute;
+    bottom: 0;
+    right: 4px;
+}
+
+#destacada .footer {
+    display: block;
+    margin-top: 5px;
+    text-transform: capitalize;
+    font-variant: small-caps;
+    text-align: right;
+    color: #666;
+    text-decoration: underline;
+}
+
+#destacada p {
+    margin: 0;
+    color: #666;
+}
+
+#destacada img {
+    float: left;
+    margin-right: 8px;
 }
 
 .news-resumen {
@@ -572,22 +623,23 @@ a#logo {
 }
 
 @media only screen and (max-width: 800px) {
-    .header-center {
+    #header-center {
         display: none;
     }
-    .header-bottom {
+    #header-bottom {
         display: none;
     }
-    .header-top {
+    #header-top {
         height: 40px;
     }
-    .header-top ul {
+    #header-top ul {
         display: none;
     }
-    .header-top .formularios {
+    #header-top .formularios {
+        margin-top: 10px;
         display: inline-block;
     }
-    .dropbtn {
+    #dropbtn {
         width: 20px;
         margin-top: 10px;
         margin-left: 10px;
@@ -599,7 +651,7 @@ a#logo {
     .navlogo {
         display: none;
     }
-    .header-top li a {
+    #header-top li a {
         font-size: 15px;
         margin-top: 6px;
     }
@@ -615,5 +667,8 @@ a#logo {
     }
     .wideonly {
         display: none;
+    }
+    #dropdown-content li a {
+        margin: 0;
     }
 }
