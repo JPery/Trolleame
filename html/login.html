@@ -6,95 +6,41 @@
     <link rel="shortcut icon" href="../img/logo_64x64.png" type="image/png" sizes="64x64">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/login.css">
+    <script src="../js/jquery-1.12.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#include-nav-block").load("navbar.html", function () {
+                $("#nombre").html("edición general");
+                document.getElementById("nombre").href = "index.html";
+            });
+        })
+    </script>
     <title>login</title>
 </head>
 
 <body>
-    <nav id="header-top">
-        <div id=dropdown>
-            <button id=dropbtn></button>
-            <div id=dropdown-content>
-                <div id=searchdrop>
-                    <form action="">
-                        <input type="searchbox">
-                    </form>
-                </div>
-                <li><a href="">enviar historia</a></li>
-                <li><a href="index.html" class="active">portada</a></li>
-                <li> <a href="">nuevas</a></li>
-                <li> <a href="">populares</a></li>
-                <li> <a href="">más visitadas</a></li>
-                <li> <a href="">destacadas</a></li>
-                <li> <a href="">m/</a></li>
-                <li> <a href="">fisgona</a></li>
-                <li> <a href="">nótame</a></li>
-                <li> <a href="">galería</a></li>
-                <li> <a href=""><b>?</b></a></li>
-            </div>
-        </div>
-        <div class=img>
-            <a href="index.html"><img src="../img/logos-common.png" alt="menéame"></a>
-        </div>
-        <div class=navlogo><img src="../img/h9_logo_ed.svg" alt=""></div>
-        <ul>
-            <li><a href="index.html" class="active">edición general</a></li>
-            <li><a href="cultura.html">cultura y tecnología</a></li>
-            <li><a href="deportes.html">deportes</a></li>
-        </ul>
-        <ul class=formularios>
-            <li><a href="login.html">login</a></li>
-            <li><a href="register.html">registrarse</a></li>
-        </ul>
-    </nav>
-    <nav id="header-center">
-        <a href="index.html" id="logo"><img src="../img/h9_eli.svg" alt="menéame logo" id="logo"></a>
-        <a href="index.html">edición general</a>
-        <div class=RS>
-            <a href="https://es-es.facebook.com/meneameoficial" id="flogo"><img src="../img/fb-24.png" alt="facebook logo" id="flogo"></a>
-            <a href="https://twitter.com/meneame_net" id="twlogo"><img src="../img/tw-24.png" alt="facebook logo" id="flogo"></a>
-        </div>
 
-        <div class=search>
-            <form action="">
-                <input type="searchbox">
-            </form>
-        </div>
-    </nav>
-    <nav id="header-bottom">
-        <ul>
-            <li><a href="">enviar historia</a></li>
-            <li><a href="index.html" class="active">portada</a></li>
-            <li><a href="">nuevas</a></li>
-            <li><a href="">populares</a></li>
-            <li><a href="">más visitadas</a></li>
-            <li><a href="">destacadas</a></li>
-        </ul>
-        <ul class=formularios>
-            <li><a href="">m/</a></li>
-            <li><a href="">fisgona</a></li>
-            <li><a href="">nótame</a></li>
-            <li><a href="">galería</a></li>
-            <li><a href=""><b>?</b></a>
-            </li>
-        </ul>
-    </nav>
+
+    <div id="include-nav-block"></div>
+
+
     <div class=wrap>
         <div class=login>
             <div class=faq>
-                <h3>¿Qué es menéame?</h3>
-                <p>Es un sitio que te permite enviar una historia que será revisada por todos y será promovida, o no, a la página principal. Cuando un usuario envía una historia ésta queda en la cola de pendientes hasta que reúne los votos suficientes para ser promovida a la página principal.
+                <h3>¿Qué es trolléame?</h3>
+                <p>Es un sitio que te permite enviar una historia troll que será revisada por todos y será promovida, o no, a la página principal. Cuando un usuario envía una historia ésta queda en la cola de pendientes hasta que reúne los votos suficientes para ser promovida a la página principal.
                 </p>
-                <h3>¿Todavía no eres usuario de menéame?</h3>
+                <h3>¿Todavía no eres usuario de trolléame?</h3>
                 <p>Como usuario registrado podrás, entre otras cosas:</p>
                 <ul>
                     <li>Enviar historias</li>
-                    <p>Una vez registrado puedes enviar las historias que consideres interesantes para la comunidad. Si tienes algún tipo de duda sobre que tipo de historias puedes enviar revisa nuestras preguntas frecuentes sobre menéame.</p>
+                    <p>Una vez registrado puedes enviar las historias que consideres más trolls para la comunidad. Si tienes algún tipo de duda sobre que tipo de historias troll puedes enviar, revisa nuestras preguntas frecuentes sobre trolléame.</p>
                     <li>Escribir comentarios</li>
-                    <p>Puedes escribir tu opinión sobre las historias enviadas a menéame mediante comentarios de texto. También puedes votar positivamente aquellos comentarios ingeniosos, divertidos o interesantes y negativamente aquellos que consideres inoportunos.</p>
+                    <p>Puedes escribir tu opinión sobre las historias trolls enviadas a trolléame mediante comentarios de texto. También puedes votar positivamente aquellos comentarios ingeniosos, divertidos o interesantes y negativamente aquellos que consideres inoportunos.</p>
                     <li>Perfil de usuario</li>
-                    <p> Toda tu información como usuario está disponible desde la página de tu perfil. También puedes subir una imagen que representará a tu usuario en menéame. Incluso es posible compartir los ingresos publicitarios de Menéame, solo tienes que introducir el código de tu cuenta Google Adsense desde tu perfil.</p>
+                    <p> Toda tu información como usuario troll está disponible desde la página de tu perfil. También puedes subir una imagen que representará a tu usuario en trolléame. Incluso es posible compartir los ingresos publicitarios de Trolléame, sólo tienes que introducir el código de tu cuenta Google Adsense desde tu perfil.</p>
                     <li>Chatear en tiempo real desde la fisgona </li>
-                    <p>Gracias a la fisgona puedes ver en tiempo real toda la actividad de menéame. Además como usuario registrado podrás chatear con mucha más gente de la comunidad menéame</p>
+                    <p>Gracias a la fisgona puedes ver en tiempo real toda la actividad de trolléame. Además como usuario registrado podrás chatear con mucha más gente de la comunidad trolléame.</p>
                 </ul>
                 <h3><a href="register.html" >Regístrate ahora</a></h3>
             </div>

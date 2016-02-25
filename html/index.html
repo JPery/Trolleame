@@ -4,83 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="shortcut icon" href="../img/logo_64x64.png" type="image/png" sizes="64x64">
-    <title>Menéame</title>
+    <link rel="shortcut icon" href="../img/logo.png" type="image/png" sizes="64x64">
+    <script src="../js/jquery-1.12.0.min.js"></script>
+    <script>
+        $(function () {
+            $("#include-nav-block").load("navbar.html", function () {
+                $("#nombre").html("edición general");
+                document.getElementById("nombre").href = "index.html";
+            });
+        })
+    </script>
+    <title>Trolléame</title>
 </head>
 
 <body>
-    <nav id="header-top">
-        <div id=dropdown>
-            <div class=menu-wrap>
-                <button id=dropbtn></button>
-            </div>
-            <div id=dropdown-content>
-                <div id=searchdrop>
-                    <form action="">
-                        <input type="searchbox">
-                    </form>
-                </div>
-                <li><a href="">enviar historia</a></li>
-                <li><a href="index.html" class="active">portada</a></li>
-                <li> <a href="">nuevas</a></li>
-                <li> <a href="">populares</a></li>
-                <li> <a href="">más visitadas</a></li>
-                <li> <a href="">destacadas</a></li>
-                <li> <a href="">m/</a></li>
-                <li> <a href="">fisgona</a></li>
-                <li> <a href="">nótame</a></li>
-                <li> <a href="">galería</a></li>
-                <li> <a href=""><b>?</b></a></li>
-            </div>
-        </div>
-        <div class=img>
-            <a href="index.html"><img src="../img/logos-common.png" alt="menéame"></a>
-        </div>
-        <div class=navlogo><img src="../img/h9_logo_ed.svg" alt=""></div>
-        <ul>
-            <li><a href="index.html" class="active">edición general</a></li>
-            <li><a href="cultura.html">cultura y tecnología</a></li>
-            <li><a href="deportes.html">deportes</a></li>
-        </ul>
-        <ul class=formularios>
-            <li><a href="login.html">login</a></li>
-            <li><a href="register.html">registrarse</a></li>
-        </ul>
-    </nav>
-    <nav id="header-center">
-        <a href="index.html" id="logo"><img src="../img/h9_eli.svg" alt="menéame logo" id="logo"></a>
-        <a href="index.html">edición general</a>
-        <div class=RS>
-            <a href="https://es-es.facebook.com/meneameoficial" id="flogo"><img src="../img/fb-24.png" alt="facebook logo" id="flogo"></a>
-            <a href="https://twitter.com/meneame_net" id="twlogo"><img src="../img/tw-24.png" alt="facebook logo" id="flogo"></a>
-        </div>
 
-        <div class=search>
-            <form action="">
-                <input type="searchbox">
-            </form>
-        </div>
-    </nav>
-    <nav id="header-bottom">
-        <ul>
-            <li><a href="">enviar historia</a></li>
-            <li><a href="index.html" class="active">portada</a></li>
-            <li><a href="">nuevas</a></li>
-            <li><a href="">populares</a></li>
-            <li><a href="">más visitadas</a></li>
-            <li><a href="">destacadas</a></li>
-        </ul>
-        <ul class=formularios>
-            <li><a href="">m/</a></li>
-            <li><a href="">fisgona</a></li>
-            <li><a href="">nótame</a></li>
-            <li><a href="">galería</a></li>
-            <li><a href=""><b>?</b></a>
-            </li>
-        </ul>
-    </nav>
+    <div id="include-nav-block">
+    </div>
+
+
     <div class=wrap>
-        <nav id="header-end">
+        <ul id="header-end">
             <li><a href="index.html" class="active">todas</a></li>
             <li><a href="">tecnología</a></li>
             <li><a href="">ocio</a></li>
@@ -88,7 +32,7 @@
             <li><a href="">actualidad</a></li>
             <li><a href="">m/*</a></li>
             <li><a href="">RSS</a></li>
-        </nav>
+        </ul>
 
 
         <div class=newswrap>
@@ -103,16 +47,29 @@
             </div>
 
             <div class=news-resumen>
+
+
                 <div class=meneos>
 
                     <div class=votos><a href="">384</a>"meneos"</div>
-                    <div class=vota><a href="">menéalo</a></div>
+                    <div class=vota><a href="">trolléalo</a></div>
                     <div class=clics>3773 clics</div>
                 </div>
                 <div class=news>
 
                     <h2><a href="http://www.theverge.com/2016/2/14/10953210/lemmings-game-25th-anniversary-ms-dos">Lemmings cumple 25 años</a></h2>
-                    <div class=submitted>
+                    <div class=subido>
+                        <a class="submit_user_img">
+                            <img src="" alt="">
+                        </a>
+                        <p>por</p>
+                        <a class="submit_user">usuario</a>
+                        <span>
+                        19/02/2016
+                        </span> publicado:
+                        <span>
+                        hace 30 min
+                        </span>
                     </div>
                     <a href="" class=miniatura>
                         <img src="../img/media_thumb_2x-link-2565362.jpeg" alt="">
@@ -127,17 +84,18 @@
                         <strong>negativos</strong>: <span>1</span>&nbsp;&nbsp;
                         <div class="tool"> <strong class=wideonly><a href="">compartir</a>:</strong>
                             <div class=RS>
-                                <a href="https://es-es.facebook.com/meneameoficial" id="flogo"><img src="../img/fb-24.png" alt="facebook logo" id="flogo"></a>
-                                <a href="https://twitter.com/meneame_net" id="twlogo"><img src="../img/tw-24.png" alt="facebook logo" id="flogo"></a>
+                                <a href="https://es-es.facebook.com/meneameoficial"><img src="../img/fb-24.png" alt="facebook logo"></a>
+                                <a href="https://twitter.com/meneame_net"><img src="../img/tw-24.png" alt="facebook logo"></a>
                             </div>
                         </div>
                     </div>
                     <div class=details-main>
                         <span class=contadorcomentarios>
-                          <a href="" >
+                          <a href="comentarios.html" >
                               <span class=contador> 100 </span>comentarios
                         </a>
                         </span>
+                        <span class=tool><span class=wideonly>karma: </span><span>483</span></span>
                     </div>
                 </div>
             </div>
@@ -145,7 +103,7 @@
                 <div class=meneos>
 
                     <div class=votos><a href="">384</a>"meneos"</div>
-                    <div class=vota><a href="">menéalo</a></div>
+                    <div class=vota><a href="">trolléalo</a></div>
                     <div class=clics>3773 clics</div>
                 </div>
                 <div class=news>
@@ -166,17 +124,18 @@
                         <strong>negativos</strong>: <span>1</span>&nbsp;&nbsp;
                         <div class="tool"> <strong class=wideonly><a href="">compartir</a>:</strong>
                             <div class=RS>
-                                <a href="https://es-es.facebook.com/meneameoficial" id="flogo"><img src="../img/fb-24.png" alt="facebook logo" id="flogo"></a>
-                                <a href="https://twitter.com/meneame_net" id="twlogo"><img src="../img/tw-24.png" alt="facebook logo" id="flogo"></a>
+                                <a href="https://es-es.facebook.com/meneameoficial"><img src="../img/fb-24.png" alt="facebook logo"></a>
+                                <a href="https://twitter.com/meneame_net"><img src="../img/tw-24.png" alt="facebook logo"></a>
                             </div>
                         </div>
                     </div>
                     <div class=details-main>
                         <span class=contadorcomentarios>
-                          <a href="" >
+                          <a href="comentarios.html" >
                               <span class=contador> 100 </span>comentarios
                         </a>
                         </span>
+                        <span class=tool><span class=wideonly>karma: </span><span>483</span></span>
                     </div>
                 </div>
             </div>
@@ -184,7 +143,7 @@
                 <div class=meneos>
 
                     <div class=votos><a href="">384</a>"meneos"</div>
-                    <div class=vota><a href="">menéalo</a></div>
+                    <div class=vota><a href="">trolléalo</a></div>
                     <div class=clics>3773 clics</div>
                 </div>
                 <div class=news>
@@ -205,17 +164,18 @@
                         <strong>negativos</strong>: <span>1</span>&nbsp;&nbsp;
                         <div class="tool"> <strong class=wideonly><a href="">compartir</a>:</strong>
                             <div class=RS>
-                                <a href="https://es-es.facebook.com/meneameoficial" id="flogo"><img src="../img/fb-24.png" alt="facebook logo" id="flogo"></a>
-                                <a href="https://twitter.com/meneame_net" id="twlogo"><img src="../img/tw-24.png" alt="facebook logo" id="flogo"></a>
+                                <a href="https://es-es.facebook.com/meneameoficial"><img src="../img/fb-24.png" alt="facebook logo"></a>
+                                <a href="https://twitter.com/meneame_net"><img src="../img/tw-24.png" alt="facebook logo"></a>
                             </div>
                         </div>
                     </div>
                     <div class=details-main>
                         <span class=contadorcomentarios>
-                          <a href="" >
+                          <a href="comentarios.html" >
                               <span class=contador> 100 </span>comentarios
                         </a>
                         </span>
+                        <span class=tool><span class=wideonly>karma: </span><span>483</span></span>
                     </div>
                 </div>
             </div>
@@ -223,7 +183,7 @@
                 <div class=meneos>
 
                     <div class=votos><a href="">384</a>"meneos"</div>
-                    <div class=vota><a href="">menéalo</a></div>
+                    <div class=vota><a href="">trolléalo</a></div>
                     <div class=clics>3773 clics</div>
                 </div>
                 <div class=news>
@@ -244,17 +204,18 @@
                         <strong>negativos</strong>: <span>1</span>&nbsp;&nbsp;
                         <div class="tool"> <strong class=wideonly><a href="">compartir</a>:</strong>
                             <div class=RS>
-                                <a href="https://es-es.facebook.com/meneameoficial" id="flogo"><img src="../img/fb-24.png" alt="facebook logo" id="flogo"></a>
-                                <a href="https://twitter.com/meneame_net" id="twlogo"><img src="../img/tw-24.png" alt="facebook logo" id="flogo"></a>
+                                <a href="https://es-es.facebook.com/meneameoficial"><img src="../img/fb-24.png" alt="facebook logo"></a>
+                                <a href="https://twitter.com/meneame_net"><img src="../img/tw-24.png" alt="facebook logo"></a>
                             </div>
                         </div>
                     </div>
                     <div class=details-main>
                         <span class=contadorcomentarios>
-                          <a href="" >
+                          <a href="comentarios.html" >
                               <span class=contador> 100 </span>comentarios
                         </a>
                         </span>
+                        <span class=tool><span class=wideonly>karma: </span><span>483</span></span>
                     </div>
                 </div>
             </div>
@@ -262,7 +223,7 @@
                 <div class=meneos>
 
                     <div class=votos><a href="">384</a>"meneos"</div>
-                    <div class=vota><a href="">menéalo</a></div>
+                    <div class=vota><a href="">trolléalo</a></div>
                     <div class=clics>3773 clics</div>
                 </div>
                 <div class=news>
@@ -283,17 +244,18 @@
                         <strong>negativos</strong>: <span>1</span>&nbsp;&nbsp;
                         <div class="tool"> <strong class=wideonly><a href="">compartir</a>:</strong>
                             <div class=RS>
-                                <a href="https://es-es.facebook.com/meneameoficial" id="flogo"><img src="../img/fb-24.png" alt="facebook logo" id="flogo"></a>
-                                <a href="https://twitter.com/meneame_net" id="twlogo"><img src="../img/tw-24.png" alt="facebook logo" id="flogo"></a>
+                                <a href="https://es-es.facebook.com/meneameoficial"><img src="../img/fb-24.png" alt="facebook logo"></a>
+                                <a href="https://twitter.com/meneame_net"><img src="../img/tw-24.png" alt="facebook logo"></a>
                             </div>
                         </div>
                     </div>
                     <div class=details-main>
                         <span class=contadorcomentarios>
-                          <a href="" >
+                          <a href="comentarios.html" >
                               <span class=contador> 100 </span>comentarios
                         </a>
                         </span>
+                        <span class=tool><span class=wideonly>karma: </span><span>483</span></span>
                     </div>
                 </div>
             </div>
@@ -301,7 +263,7 @@
                 <div class=meneos>
 
                     <div class=votos><a href="">384</a>"meneos"</div>
-                    <div class=vota><a href="">menéalo</a></div>
+                    <div class=vota><a href="">trolléalo</a></div>
                     <div class=clics>3773 clics</div>
                 </div>
                 <div class=news>
@@ -322,17 +284,18 @@
                         <strong>negativos</strong>: <span>1</span>&nbsp;&nbsp;
                         <div class="tool"> <strong class=wideonly><a href="">compartir</a>:</strong>
                             <div class=RS>
-                                <a href="https://es-es.facebook.com/meneameoficial" id="flogo"><img src="../img/fb-24.png" alt="facebook logo" id="flogo"></a>
-                                <a href="https://twitter.com/meneame_net" id="twlogo"><img src="../img/tw-24.png" alt="facebook logo" id="flogo"></a>
+                                <a href="https://es-es.facebook.com/meneameoficial"><img src="../img/fb-24.png" alt="facebook logo"></a>
+                                <a href="https://twitter.com/meneame_net"><img src="../img/tw-24.png" alt="facebook logo"></a>
                             </div>
                         </div>
                     </div>
                     <div class=details-main>
                         <span class=contadorcomentarios>
-                          <a href="" >
+                          <a href="comentarios.html" >
                               <span class=contador> 100 </span>comentarios
                         </a>
                         </span>
+                        <span class=tool><span class=wideonly>karma: </span><span>483</span></span>
                     </div>
                 </div>
             </div>

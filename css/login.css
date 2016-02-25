@@ -1,5 +1,5 @@
 legend {
-    background: #FF6400;
+    background: #216462;
 }
 
 legend span {
@@ -10,13 +10,13 @@ legend span {
 }
 
 label {
-    color: #FF6400;
+    color: #216462;
     font-weight: bold;
 }
 
 .login {
+    margin: 0 60px 10px 60px;
     background: white;
-    float: left;
 }
 
 fieldset {
@@ -24,7 +24,7 @@ fieldset {
     border: none;
     padding: 10px 10px;
     margin: 10px 10px;
-    background: #FFF1E2;
+    background: #A9D3CF;
 }
 
 input[type="text"],
@@ -44,28 +44,24 @@ span {
     display: block;
 }
 
-input[type="checkbox"] {
-    display: grid;
-}
-
 input[type="submit"] {
     border-radius: 3px;
     border: none;
     font-weight: bold;
     margin: 4px 0;
     padding: 2px 4px;
-    background-color: #FF6400;
+    background-color: #216462;
     color: #fff;
 }
 
 input[type="submit"]:hover {
-    background-color: #FFB300;
+    background-color: #7CBFB7;
 }
 
 h3 {
     font-weight: bold;
     font-size: 125%;
-    color: #FF6400;
+    color: #216462;
     margin-top: 0;
     margin-bottom: 3px;
 }
@@ -77,14 +73,14 @@ h3 {
     display: list-item;
     list-style-type: disc;
     font-weight: normal;
-    color: #FF6400;
+    color: #216462;
     font-weight: bold;
 }
 
 .faq ul li {
     font-size: 100%;
     float: initial;
-    color: #FF6400;
+    color: #216462;
 }
 
 .faq ul p {
@@ -110,15 +106,15 @@ p {
 }
 
 h3 a {
-    color: #FF6400;
+    color: #216462;
     text-decoration: underline;
     display: block;
     width: 8em;
     text-align: center;
     margin: 0 auto;
     padding: 0.5em 1em;
-    border: 3px double #FFE2C5;
-    background: #FFF3E8;
+    border: 3px double #7CBFB7;
+    background: #A9D3CF;
     font-weight: bold;
     font-size: 100%;
 }
@@ -134,7 +130,7 @@ h4 a {
     border-bottom-style: dotted;
     padding-bottom: 1px;
     text-decoration: none;
-    color: #FF6400;
+    color: #216462;
 }
 
 .foot {
@@ -142,6 +138,16 @@ h4 a {
 }
 
 @media only screen and (max-width: 800px) {
+    .formulario {
+        padding-top: 10px;
+        width: 100%;
+    }
+    fieldset {
+        margin: 10px 60px;
+    }
+    .login {
+        margin-top: 40px;
+    }
     .faq {
         display: none;
     }

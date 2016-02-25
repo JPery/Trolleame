@@ -1,6 +1,6 @@
 legend {
     color: white;
-    background: #FF6400;
+    background: #216462;
     font-weight: bold;
     font-size: 110%;
     padding: 0 5px;
@@ -9,7 +9,7 @@ legend {
 label {
     border-radius: 3px;
     display: block;
-    color: #FF6400;
+    color: #216462;
     font-weight: bold;
 }
 
@@ -19,7 +19,7 @@ label {
     padding: 0 0 20px 0;
     font-weight: bold;
     background: #FFF;
-    color: #FF6400;
+    color: #216462;
 }
 
 .register form {
@@ -31,7 +31,7 @@ fieldset {
     border-radius: 3px;
     border: none;
     padding: 10px 10px;
-    background: #FFF1E2;
+    background: #A9D3CF;
 }
 
 input[type="text"],
@@ -47,15 +47,11 @@ input[type="email"] {
 }
 
 span {
-    color: #FF9400;
+    color: #007251;
     font-weight: normal;
     font-size: 85%;
     display: block;
     padding-bottom: 5px;
-}
-
-input[type="checkbox"] {
-    display: grid;
 }
 
 input[type="submit"] {
@@ -65,21 +61,21 @@ input[type="submit"] {
     font-weight: bold;
     margin: 4px 0;
     padding: 2px 4px;
-    background-color: #FF6400;
+    background-color: #216462;
     color: #fff;
 }
 
 input[type="submit"]:hover {
-    background-color: #FFB300;
+    background-color: #7CBFB7;
 }
 
 input[type="submit"]:disabled {
-    color: #aaa;
+    color: #684D94;
     background: none;
 }
 
 input[type="submit"]:disabled:hover {
-    color: #aaa;
+    color: #684D94;
     background: none;
 }
 
@@ -89,7 +85,7 @@ input[type="submit"]:disabled:hover {
     border-bottom-style: dotted;
     padding-bottom: 1px;
     text-decoration: none;
-    color: #FF6400;
+    color: #216462;
 }
 
 .recover h4 {
@@ -98,20 +94,20 @@ input[type="submit"]:disabled:hover {
     margin: 10px 60px 0 60px;
     border: 0;
     font-weight: bold;
-    color: #FF6400;
+    color: #216462;
 }
 
 .recover {
     background: #fff;
     margin: 0 60px 0 60px;
-    padding 0;
+    padding: 0;
 }
 
 .formulario {
     border: 0;
     padding: 0 0 20px 0;
     background: #FFF;
-    color: #FF6400;
+    color: #216462;
 }
 
 .verify {
@@ -130,15 +126,24 @@ input[type="submit"]:disabled:hover {
 }
 
 .verify:disabled {
-    color: #aaa;
+    color: #684D94;
     background: none;
 }
 
 .verify:disabled:hover {
-    color: #aaa;
+    color: #684D94;
     background: none;
 }
 
 .foot {
     padding-right: 8px;
+}
+
+@media only screen and (max-width: 800px) {
+    .wrap {
+        position: initial;
+    }
+    .recover {
+        padding-top: 50px;
+    }
 }

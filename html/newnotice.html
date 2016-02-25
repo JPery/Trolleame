@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../css/register.css">
-    <link rel="shortcut icon" href="../img/logo_64x64.png" type="image/png" sizes="64x64">
+    <link rel="stylesheet" type="text/css" href="../css/newnotice.css">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/png" sizes="64x64">
     <script src="../js/jquery-1.12.0.min.js"></script>
     <script>
         $(function () {
@@ -15,39 +15,39 @@
             });
         })
     </script>
-    <title>registro</title>
+    <title>Trolléame</title>
 </head>
 
 <body>
 
-
-    <div id="include-nav-block"></div>
+    <div id="include-nav-block">
+    </div>
 
 
     <div class=wrap>
         <div class=formulario>
-            <div class=recover>
-                <h4><a href="#">¿has olvidado la contraseña?</a></h4>
-            </div>
-            <div class=register>
+            <div class=noticianueva>
                 <form action="">
                     <fieldset>
-                        <legend>datos del usuario</legend>
-                        <label for="user">nombre de usuario:</label>
-                        <input type="text" name="user" id="user">
-                        <input type="button" class="verify" value="verificar" disabled id="verify1">
-                        <label for="email">email:</label>
-                        <span>es importante que sea correcta, recibirás un correo para validar la cuenta</span>
-                        <input type="text" id="email" name="email">
-                        <input type="button" class="verify" value="verificar" disabled id="verify2">
-                        <label for="pass">clave:</label>
-                        <span>al menos ocho caracteres, incluyendo mayúsculas, minúsculas y números </span>
-                        <input type="password" name="pass" id="pass">
-                        <label for="pass">verificación de clave:</label>
-                        <input type="password" name="pass" id="pass">
-                        <input type="submit" value="crear usuario" disabled>
-                        <div style="margin-top: 20px">
+                        <legend>nueva noticia</legend>
+                        <label for="url">url de la noticia:</label>
+                        <span>se linkará al enlace que tú nos mandes</span>
+                        <input type="url" id="url" name="url">
+                        <label for="text">título de la noticia:</label>
+                        <span>título de la noticia. máximo: 120 caracteres</span>
+                        <input type="text" id="title" name="title">
+                        <label for="etiquetas">etiquetas de la noticia:</label>
+                        <span> pocas palabras, separadas por «,» </span>
+                        <input type="text" id="etiquetas" name="etiquetas">
+                        <label for="user">imagen de la noticia:</label>
+                        <input type="text" class="file" name="file_info">
+                        <div class="file_upload">
+                            <input type="file" id="file_upload" name="file_upload">
                         </div>
+                        <label for="user">cuerpo de la noticia:</label>
+                        <textarea class=escribir placeholder="Da una breve descripción de la noticia"></textarea>
+
+                        <input type="submit" value="enviar noticia">
                     </fieldset>
                 </form>
             </div>
