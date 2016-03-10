@@ -1,0 +1,341 @@
+.wrap {
+    background: white;
+    margin: auto;
+    padding-top: 2px;
+    max-width: 1300px;
+    text-align: left;
+    margin-top: 0;
+    width: 99%;
+}
+
+h2 a {
+    font-weight: normal;
+}
+
+.newswrap {
+    margin: 10px 10px;
+}
+
+#destacada {
+    position: relative;
+    background: #f9f9f9;
+    border: #ddd 1px solid;
+    padding: 5px 5px;
+    margin: 10px 0;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+#destacada h1 {
+    line-height: 100%;
+    font-size: 140%;
+    font-weight: normal;
+    margin: 0;
+}
+
+#destacada .footer {
+    position: absolute;
+    bottom: 0;
+    right: 4px;
+}
+
+#destacada .footer {
+    display: block;
+    margin-top: 5px;
+    text-transform: capitalize;
+    font-variant: small-caps;
+    text-align: right;
+    color: #666;
+    text-decoration: underline;
+}
+
+#destacada p {
+    margin: 0;
+    color: #666;
+}
+
+#destacada img {
+    float: left;
+    margin-right: 8px;
+}
+
+.news-resumen {
+    background-color: rgba(169, 211, 207, 0.1);
+    transition: background-color 0.3s linear;
+    border: ridge 1.5px rgb(124, 191, 183);
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px 0;
+    position: relative;
+}
+
+.news-resumen:hover {
+    background-color: rgba(169, 211, 207, 0.25);
+    border: groove 1.5px rgb(124, 191, 183);
+}
+
+.news {
+    padding-left: 95px;
+    padding-right: 5px;
+    overflow: hidden;
+}
+
+.news h2 {
+    margin: 0;
+    padding: 0 5px 0 0;
+    font-size: 140%;
+    font-weight: normal;
+    background: none;
+    border: none;
+}
+
+.trolleos {
+    position: absolute;
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    width: 67px;
+    height: 85px;
+    border: 1px solid #A9D3CF;
+    font-size: 12px;
+    color: #216462;
+    text-align: center;
+    background-clip: padding-box;
+    border-radius: 3px;
+}
+
+.votos {
+    padding: 6px 0 6px;
+    border: 1px solid #FFF;
+    border-bottom: 0;
+    line-height: 1.2em;
+    background-repeat: repeat-x;
+    background-position: 0 -2px;
+    background-clip: padding-box;
+    border-radius: 3px 3px 0 0;
+}
+
+.votos a {
+    display: block;
+    color: #216462;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.vota {
+    position: relative;
+    left: -6px;
+    display: inline-block;
+    width: 78px;
+    border: 1px solid #7CBFB7;
+    background-color: #77d77d;
+}
+
+.vota a {
+    display: block;
+    padding: 2px 0;
+    height: 18px;
+    color: #007251;
+    text-decoration: none;
+    border: 1px solid #FFF;
+    background: url('../img/back.png') repeat-x;
+}
+
+.clics {
+    padding: 1px 0 2px 0;
+    border: 1px solid #FFF;
+    border-top: 0;
+    font-size: 10px;
+    background-repeat: repeat-x;
+    background-position: bottom;
+    background-clip: padding-box;
+    border-radius: 0 0 3px 3px;
+}
+
+.trolleos .votos,
+.trolleos .clics {
+    background-image: url('../img/back2.png');
+}
+
+.miniatura img {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    float: right;
+    margin: 3px 3px 3px 5px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+}
+
+.subido p {
+    display: inline-block;
+    margin: 0;
+}
+
+.subido .submit_user {
+    color: blue;
+    font-weight: bold;
+}
+
+.details {
+    padding: 0;
+    margin-top: 4px;
+    overflow: hidden;
+    white-space: normal;
+    color: #666;
+}
+
+.details-main,
+.details a {
+    color: #666;
+    text-decoration: none;
+}
+
+.details a:hover {
+    text-decoration: underline;
+}
+
+.tool {
+    display: inline;
+    border-left: 1px solid;
+    padding: 0 4px 0 6px;
+    border-left-color: #666;
+}
+
+.details-main {
+    margin-top: 6px;
+}
+
+.details-main .contadorcomentarios {
+    padding: 0 6px 0 0;
+    border-left: none;
+    font-size: 120%;
+}
+
+.contadorcomentarios a .contador {
+    padding: 1px 4px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 3px;
+    background-color: #43AB9B;
+    font-size: 9pt;
+    color: white;
+    display: inline;
+    line-height: 120%;
+    margin-right: 0.25em;
+}
+
+.contadorcomentarios a:hover {
+    text-decoration: underline;
+}
+
+.contadorcomentarios a:hover .contador {
+    text-decoration: none;
+}
+
+.contadorcomentarios .contador:hover {
+    text-decoration: none;
+    display: inline;
+    line-height: 120%;
+    margin-right: 0.25em;
+}
+
+.details-main .contadorcomentarios a:link,
+.details-main .contadorcomentarios a:visited {
+    color: #03a;
+}
+
+.details .RS {
+    margin-left: 0;
+    display: inline;
+    float: none;
+}
+
+.details .RS a {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    opacity: 0.6;
+    vertical-align: text-top;
+    background-size: 20px 300px;
+}
+
+.details .RS a:hover {
+    opacity: 1;
+}
+
+.details .RS img {
+    height: 18px;
+    width: 18px;
+    resize: both;
+}
+
+footer {
+    margin-top: 20px;
+    list-style-type: none;
+    background: url(../img/logos-common2.png) no-repeat;
+    background-color: white;
+    clear: both;
+    padding-left: 110px;
+    overflow: auto;
+}
+
+footer p {
+    list-style-type: none;
+    border-bottom: 1px solid;
+    padding-bottom: 0px;
+    color: rgba(0, 0, 0, 0);
+    border-color: #7CBFB7;
+    background: none;
+}
+
+footer ul {
+    display: block;
+    list-style-type: none;
+    text-align: center;
+    float: left;
+    display: inline-block;
+    width: 84%;
+    margin-top: 2px;
+    list-style-type: none;
+    color: #999;
+}
+
+footer ul li {
+    display: inline-block;
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    color: #999;
+}
+
+footer ul li a {
+    font-size: 85%;
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    color: #999;
+    height: 0;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 800px) {
+    .wrap {
+        position: absolute;
+        padding: 0;
+    }
+    .header-end .nav {
+        border: 0;
+        padding: 0 0 0 5px;
+    }
+    .newswrap {
+        width: 100%;
+        margin: 45px 0;
+    }
+    .wideonly {
+        display: none;
+    }
+}

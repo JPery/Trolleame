@@ -1,0 +1,125 @@
+.news-resumen {
+    border: solid 1.5px rgb(124, 191, 183);
+    margin: 10px;
+}
+
+.news-resumen:hover {
+    border: solid 1.5px rgb(124, 191, 183);
+}
+
+.comentarios {
+    display: block;
+    margin: 0 10px;
+    margin-top: 10px;
+    background: rgb(233, 244, 243);
+    border: solid 1.5px rgb(124, 191, 183);
+    border-radius: 10px;
+}
+
+.comentariodatos {
+    background: rgb(243, 249, 248);
+    transition: background-color 0.3s linear;
+    border: solid 1.5px rgb(124, 191, 183);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.comentariodatos:hover {
+    background: rgb(233, 244, 243);
+}
+
+.comentariodatos p {
+    margin: 10px;
+    padding: 0 30px;
+    height: 100%;
+    background: #fff url('../img/comentarios.png') no-repeat;
+    background-size: 20px;
+}
+
+.comentariotexto {
+    background: white;
+    opacity: 0.9;
+    border: solid 1.5px rgb(124, 191, 183);
+    border-radius: 10px;
+}
+
+.comentariousuario {
+    display: inline-block;
+}
+
+.comentariousuario a {
+    font-weight: bold;
+}
+
+.comentariosvotos {
+    float: right;
+}
+
+.editar {
+    display: block;
+    text-align: right;
+    margin: 10px;
+}
+
+.editar a {
+    color: blue;
+}
+
+.editar a:hover {
+    text-decoration: underline;
+}
+
+.escribircomentario {
+    margin: 20px;
+    margin-bottom: 35px;
+    display: block;
+}
+
+.escribircomentario form {
+    display: block;
+    padding-right: 22px;
+}
+
+.escribir {
+    border: 1px solid rgb(221, 221, 221);
+    font-family: Roboto;
+    margin-bottom: 5px;
+    font-size: 14px;
+    width: 100%;
+    display: block;
+    padding: 10px;
+    resize: none;
+    height: 5em;
+}
+
+input[type="submit"] {
+    float: right;
+    display: block;
+    border-radius: 3px;
+    border: none;
+    font-weight: bold;
+    margin: 4px 0;
+    padding: 2px 4px;
+    background-color: #216462;
+    color: #fff;
+}
+
+input[type="submit"]:hover {
+    background-color: #7CBFB7;
+}
+
+.details-main .editar {
+    float: right;
+    display: inline;
+    margin: 2px 4px 1px;
+}
+
+@media only screen and (max-width: 800px) {
+    .news-resumen {
+        margin-top: 50px;
+    }
+    .wrap {
+        position: absolute;
+    }
+}
