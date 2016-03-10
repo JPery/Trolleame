@@ -1,0 +1,364 @@
+        html {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: small;
+            background-image: url('../img/bkg-01.png');
+            color: #000;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            min-width: 320px;
+        }
+        
+        #header-top {
+            font-family: 'Roboto';
+            position: fixed;
+            z-index: 890;
+            width: 100%;
+            background-color: #3c3c3c;
+            overflow: visible;
+        }
+        
+        #header-top ul {
+            list-style-type: none;
+            margin: 2px 0 0 0;
+            padding: 0;
+            float: left;
+        }
+        
+        #img a {
+            position: relative;
+            margin: 4px 5px 0 28px;
+            float: left;
+            display: inline-block;
+            background-image: url('../img/logos-common.png');
+            height: 18px;
+            width: 110px;
+        }
+        
+        .navlogo {
+            height: 15px;
+            width: 9px;
+            margin: 7px 4px 0 4px;
+            float: left;
+        }
+        
+        a {
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        li {
+            font-size: 14px;
+            color: #fff;
+            float: left;
+        }
+        
+        li a {
+            font-size: 15px;
+            padding-top: 1px;
+            text-decoration: none;
+            height: 27px;
+            margin: 0 0 0 10px;
+            color: #fff;
+            display: inline-block;
+        }
+        
+        li a:hover:not(.active) {
+            background: url('../img/nav-white.png') bottom left repeat-x;
+        }
+        
+        .active {
+            background: url('../img/nav-white.png') bottom left repeat-x;
+        }
+        
+        .navimg {
+            margin: 0 5px 0 5px;
+            float: left;
+            display: inline-block;
+        }
+        
+        a#logo {
+            padding-left: 5px;
+            width: 55px;
+            margin: 0 0 0 10px;
+            float: left;
+        }
+        
+        #header-top .formularios li a:hover:not(.active) {
+            background: none;
+            color: #A9D3CF;
+        }
+        
+        #header-top .formularios,
+        .formularios {
+            float: right;
+        }
+        
+        #header-top a:hover {
+            text-decoration: none;
+        }
+        
+        #header-top ul li a {
+            font-size: 14px;
+            margin-right: 10px;
+        }
+        
+        #header-top .formularios li {
+            position: relative;
+            margin-right: 10px;
+        }
+        
+        #header-top .formularios li a {
+            font-size: 15px;
+            margin: 0;
+        }
+        
+        #dropbtn {
+            height: 20px;
+            resize: horizontal;
+            background-color: #3c3c3c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+            display: inline-block;
+            background: url('../img/icons-common2.png');
+            opacity: 1;
+            transition: opacity 0.3s ease-in-out;
+        }
+        
+        @media (min-resolution: 2dppx),
+        (min-resolution: 192dpi) {
+            #dropbtn {
+                background-size: 20px;
+                background-image: url('../img/icons-common2-2x.png');
+            }
+            #img a {
+                background-size: 110px;
+                background-image: url('../img/logos-common-2x.png');
+            }
+        }
+        
+        #dropdown {
+            display: block;
+            float: left;
+            position: absolute;
+        }
+        
+        #dropdown #dropdown-content {
+            background-color: #3c3c3c;
+            position: absolute;
+            float: none;
+            transition: opacity 0.2s linear;
+            width: 200px;
+            display: none;
+            margin: 0;
+        }
+        
+        #dropdown-content li a {
+            margin: 0;
+            color: white;
+            padding-left: 20px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        #dropdown-content li a:hover {
+            background: none;
+        }
+        
+        #dropdown-content .active {
+            font-weight: bold;
+            background: none;
+        }
+        
+        #dropdown-content a:hover {
+            font-weight: bold;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        #dropdown:hover #dropdown-content {
+            display: block;
+            animation: fadeIn 0.3s;
+        }
+        
+        #dropdown:hover #dropbtn {
+            transition: all 0.3s linear;
+            transform: translate(0, 30px);
+            opacity: 0;
+            background-color: #3c3c3c;
+        }
+        
+        #dropdown-content li {
+            float: none;
+            list-style: none;
+        }
+        
+        #searchdrop {
+            margin-right: 10px;
+            padding-top: 0px;
+            padding: 1% 1%;
+        }
+        
+        #searchdrop input {
+            border-radius: 3px;
+            border: 0px;
+            width: 130px;
+            height: 24px;
+            font-size: 16px;
+            padding-top: 0px;
+            padding-left: 20px;
+            margin: 10px;
+            margin-left: 17px;
+            background: #fff url('../img/lupa.png') no-repeat 0 3px;
+        }
+        
+        #header-center {
+            font-family: 'Roboto';
+            padding-top: 30px;
+            height: 45px;
+            background-color: #7CBFB7;
+            overflow: hidden;
+            white-space: nowrap;
+            padding-bottom: 2px;
+            color: #fff;
+        }
+        
+        #header-center a {
+            float: left;
+            margin-top: 6px;
+            font-size: 25px;
+            color: white;
+            text-decoration: none;
+        }
+        
+        #header-center a:hover:not(.active) {
+            text-decoration: underline;
+        }
+        
+        .search {
+            float: right;
+        }
+        
+        .search input {
+            border-radius: 3px;
+            border: 0px;
+            width: 280px;
+            height: 24px;
+            font-size: 16px;
+            margin: 10px;
+            padding-left: 20px;
+            background: #fff url('../img/lupa.png') no-repeat 0 3px;
+        }
+        
+        #header-bottom {
+            font-family: 'Roboto';
+            display: block;
+            height: 30px;
+            background-color: #A9D3CF;
+            white-space: nowrap;
+            overflow: hidden;
+            font-size: 15px;
+            padding: 0 0 0 10px;
+        }
+        
+        #header-bottom ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 2px;
+        }
+        
+        #header-bottom ul li {
+            display: inline-block;
+            list-style-type: none;
+            float: left;
+            line-height: 145%;
+            margin-right: 10px;
+        }
+        
+        #header-bottom .formularios {
+            margin-top: 0;
+        }
+        
+        #header-bottom ul li a {
+            font-size: 15px;
+            display: inline-block;
+            color: #007251;
+            text-align: center;
+            text-decoration: none;
+            border-bottom: solid #A9D3CF;
+        }
+        
+        #header-bottom ul li a:hover:not(.active) {
+            background: url('../img/nav-green.png') bottom left repeat-x;
+        }
+        
+        #header-bottom .active {
+            background: url('../img/nav-green.png') bottom left repeat-x;
+        }
+        
+        .RS {
+            margin-top: 5px;
+            margin-left: 10px;
+            display: block;
+            float: left;
+        }
+        
+        .RS a {
+            padding-left: 5px;
+            opacity: 0.7;
+        }
+        
+        .RS a:hover {
+            opacity: 1;
+        }
+        
+        @media only screen and (max-width: 800px) {
+            #header-center {
+                display: none;
+            }
+            #header-bottom {
+                display: none;
+            }
+            #header-top {
+                height: 40px;
+            }
+            #header-top ul {
+                display: none;
+            }
+            #header-top .formularios {
+                display: inline-block;
+            }
+            #dropbtn {
+                width: 20px;
+                margin-top: 10px;
+                margin-left: 10px;
+            }
+            #img {
+                margin-top: 6px;
+                margin-left: 20px;
+            }
+            .navlogo {
+                display: none;
+            }
+            #header-top li a {
+                font-size: 15px;
+                margin-top: 6px;
+            }
+            #dropdown-content li a {
+                margin: 0;
+            }
+        }

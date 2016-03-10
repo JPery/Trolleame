@@ -1,0 +1,154 @@
+legend {
+    background: #216462;
+}
+
+legend span {
+    color: white;
+    font-weight: bold;
+    font-size: 110%;
+    margin: 0 0.2em 0 0.2em;
+}
+
+label {
+    color: #216462;
+    font-weight: bold;
+}
+
+.login {
+    margin: 0 60px 10px 60px;
+    background: white;
+}
+
+fieldset {
+    border-radius: 3px;
+    border: none;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    background: #A9D3CF;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    margin: 0 0 10px 0;
+    padding: 2px 2px;
+    border: 1px solid #ddd;
+    color: #303030;
+    display: block;
+}
+
+span {
+    color: #FF9400;
+    font-weight: normal;
+    font-size: 85%;
+    display: block;
+}
+
+input[type="submit"] {
+    border-radius: 3px;
+    border: none;
+    font-weight: bold;
+    margin: 4px 0;
+    padding: 2px 4px;
+    background-color: #216462;
+    color: #fff;
+}
+
+input[type="submit"]:hover {
+    background-color: #7CBFB7;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 125%;
+    color: #216462;
+    margin-top: 0;
+    margin-bottom: 3px;
+}
+
+.faq ul {
+    margin: 0;
+    padding: 0;
+    margin-left: 1.5em;
+    display: list-item;
+    list-style-type: disc;
+    font-weight: normal;
+    color: #216462;
+    font-weight: bold;
+}
+
+.faq ul li {
+    font-size: 100%;
+    float: initial;
+    color: #216462;
+}
+
+.faq ul p {
+    display: block;
+}
+
+p {
+    margin: 0;
+    font-weight: normal;
+    color: #303030;
+}
+
+.faq {
+    float: right;
+    width: 55%;
+    margin-top: 10px;
+}
+
+.formulario {
+    float: left;
+    width: 40%;
+    margin: 0;
+}
+
+h3 a {
+    color: #216462;
+    text-decoration: underline;
+    display: block;
+    width: 8em;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0.5em 1em;
+    border: 3px double #7CBFB7;
+    background: #A9D3CF;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+h4 {
+    text-align: center;
+}
+
+h4 a {
+    font-size: 100%;
+    font-weight: bold;
+    border-bottom-width: 1px;
+    border-bottom-style: dotted;
+    padding-bottom: 1px;
+    text-decoration: none;
+    color: #216462;
+}
+
+.foot {
+    padding-right: 8px;
+}
+
+@media only screen and (max-width: 800px) {
+    .formulario {
+        padding-top: 10px;
+        width: 100%;
+    }
+    fieldset {
+        margin: 10px 60px;
+    }
+    .login {
+        margin-top: 40px;
+    }
+    .faq {
+        display: none;
+    }
+}

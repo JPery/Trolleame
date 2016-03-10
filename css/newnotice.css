@@ -1,0 +1,141 @@
+div.file_upload {
+    display: inline;
+    border-radius: 3px;
+    border: none;
+    position: absolute;
+    margin: 1px 0;
+    background-color: #216462;
+    color: #fff;
+    width: 50px;
+    cursor: pointer;
+    margin: 3px 0;
+}
+
+div.file_upload:hover {
+    background-color: #7CBFB7;
+}
+
+div.file_upload:before {
+    content: 'subir';
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+div.file_upload input {
+    position: relative;
+    display: inline;
+    opacity: 0;
+    cursor: pointer;
+}
+
+legend {
+    color: white;
+    background: #216462;
+    font-weight: bold;
+    font-size: 110%;
+    padding: 0 5px;
+}
+
+label {
+    border-radius: 3px;
+    display: block;
+    color: #216462;
+    font-weight: bold;
+}
+
+fieldset {
+    margin: 10px;
+    padding: 10px 10px;
+    border-radius: 3px;
+    border: none;
+    background: #A9D3CF;
+}
+
+input[type="text"],
+input[type="url"] {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    padding: 2px 2px;
+    background: white;
+    border: 1px solid #ddd;
+    color: #303030;
+    display: inline-block;
+}
+
+span {
+    color: #007251;
+    font-weight: normal;
+    font-size: 85%;
+    display: block;
+    padding-bottom: 5px;
+}
+
+input[type="submit"] {
+    display: block;
+    border-radius: 3px;
+    border: none;
+    font-weight: bold;
+    margin: 4px 0;
+    padding: 2px 4px;
+    background-color: #216462;
+    color: #fff;
+}
+
+input[type="submit"]:hover {
+    background-color: #7CBFB7;
+}
+
+.formulario {
+    border: 0;
+    padding: 0 0 20px 0;
+    background: #FFF;
+    color: #216462;
+}
+
+.noticianueva {
+    margin: 0 60px 10px 60px;
+    border: 0;
+    padding: 0 0 20px 0;
+    font-weight: bold;
+    background: #FFF;
+    color: #216462;
+}
+
+.noticianueva form {
+    padding: 10px 10px;
+}
+
+.escribir {
+    font-size: 14px;
+    width: 50%;
+    display: block;
+    resize: none;
+    border: none;
+    height: 5em;
+}
+
+
+}
+.foot {
+    padding-right: 8px;
+}
+@media only screen and (max-width: 800px) {
+    .wrap {
+        position: initial;
+    }
+    
+    .formulario {
+        padding-top: 50px;
+    }
+    
+    .escribir {
+        width: 170px;
+    }
+    
+    .file {
+        width: 123px;
+    }
+}
