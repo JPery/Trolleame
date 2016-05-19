@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es" id="list" ng-app="TrolleameApp">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<link rel="stylesheet" type="text/css" href="./css/navbar.css">
+<link rel="stylesheet" type="text/css" href="./css/newnotice.css">
+<link rel="stylesheet" type="text/css" href="./css/profile.css">
+<link rel="stylesheet" type="text/css" href="./css/comentarios.css">
+<link rel="stylesheet" type="text/css" href="./css/login.css">
+<link rel="stylesheet" type="text/css" href="./css/confirm.css">
+<link rel="stylesheet" type="text/css" href="./css/error.css">
+<link rel="shortcut icon" href="./img/logo.png" type="image/png"
+	sizes="64x64">
+<link href='https://fonts.googleapis.com/css?family=Roboto'
+	rel='stylesheet' type='text/css'>
+<title>Trolléame</title>
+<!-- Include the AngularJS library -->
+<script src="./js/angular/angular.js"></script>
+<script src="./js/angular/angular-route.js"></script>
+<script src="./js/jquery-1.12.0.min.js"></script>
+<script src="./js/app.js"></script>
+<script src="./js/date.js"></script>
+<script src="./js/encrypt.js"></script>
+<script src="./js/timeAgo.js"></script>
+<script src="./js/visual.js"></script>
+<script src="./js/controllers/mainAppController.js"></script>
+<script src="./js/controllers/listController.js"></script>
+<script src="./js/controllers/loginController.js"></script>
+<script src="./js/controllers/profileController.js"></script>
+<script src="./js/controllers/commentController.js"></script>
+<script src="./js/controllers/editController.js"></script>
+<script src="./js/controllers/deleteController.js"></script>
+<script src="./js/controllers/registerController.js"></script>
+<script src="./js/services/usersFactory.js"></script>
+<script src="./js/services/newsFactory.js"></script>
+<script src="./js/services/commentsFactory.js"></script>
+<script src="./js/services/utils.js"></script>
+<script src="./js/services/auth.js"></script>
+<!-- Modules -->
+</head>
+
+<body ng-controller="mainAppCtrl as vm">
+	<header>
+		<div id=dropdown>
+			<button id=dropbtn></button>
+			<ul id=dropdown-content>
+				<li id=searchdrop>
+					<form action="search" method="get">
+						<input type="search" id="q1" name="q">
+					</form>
+				</li>
+				<li><a href="#/" ng-click='vm.utils.setCategory("actualidad")'>actualidad</a></li>
+				<li><a href="#/" ng-click='vm.utils.setCategory("ocio")'>ocio</a></li>
+				<li><a href="#/" ng-click='vm.utils.setCategory("deportes")'>deportes</a></li>
+				<li><a href="#/nuevaNoticia">enviar historia</a></li>
+				<li><a href="#/" ng-click='vm.utils.setView("")'>portada</a></li>
+				<li><a href="#/" ng-click='vm.utils.setView("nuevas")'>nuevas</a></li>
+				<li><a href="#/" ng-click='vm.utils.setView("populares")'>populares</a></li>
+				<li><a href="#/" ng-click='vm.utils.setView("destacadas")'>destacadas</a></li>
+			</ul>
+		</div>
+		<div id="img">
+			<a href="#/"
+				ng-click='vm.utils.setCategory(""); vm.utils.setView("")'></a>
+		</div>
+		<div class=navlogo>
+			<img src="./img/h9_logo_ed.svg" alt="">
+		</div>
+		<ul class=formularios>
+			<li ng-show="vm.user.id == -1"><a href="#/login">login</a></li>
+			<li ng-show="vm.user.id == -1"><a href="#/registro">registrarse</a></li>
+			<li ng-show="vm.user.id != -1"><a ng-href="#/profile/{{vm.user.id}}">{{vm.user.name}}
+					<img width="20" height="20" ng-src={{vm.user.img}}></img>
+			</a></li>
+			<li ng-show="vm.user.id != -1"><a ng-click="vm.funciones.logout();"> <img
+					width="20" height="20" src="./img/logout.png"></img>
+			</a></li>
+		</ul>
+	</header>
+	<nav id="header-center">
+		<a href="#/" id="logo" ng-click='vm.utils.setCategory(""); vm.utils.setView("")'><img src="./img/logo64x64.png"
+			alt="trolléame logo" width="40" height="40"></a> <a id="nombre"
+			href="#/"></a> <a id="nombre" href="#/"
+			ng-show="vm.utils.getCategory()!==null">{{vm.utils.getCategory()}}</a>
+		<a id="nombre" href="#/" ng-show='vm.utils.getCategory()==""'>edición
+			general</a>
+		<div class=RS>
+			<a href="https://www.facebook.com.PI/"><img src="./img/fb-40.png"
+				alt="facebook logo"></a> <a href="https://twitter.com.PI"><img
+				src="./img/tw-40.png" alt="twitter logo"></a>
+		</div>
+		<div class=search>
+			<form action="search" method="get">
+				<input type="search" id="q2" name="q">
+			</form>
+		</div>
+	</nav>
+	<nav id="header-bottom">
+		<ul>
+			<li><a href="#/nuevaNoticia">enviar historia</a></li>
+			<li><a href="#/" ng-click='vm.utils.setView("")'>portada</a></li>
+			<li><a href="#/" ng-click='vm.utils.setView("nuevas")'>nuevas</a></li>
+			<li><a href="#/" ng-click='vm.utils.setView("populares")'>populares</a></li>
+			<li><a href="#/" ng-click='vm.utils.setView("destacadas")'>destacadas</a></li>
+		</ul>
+		<ul class=formularios>
+			<li><a href="#/" ng-click='vm.utils.setCategory("actualidad")'>actualidad</a></li>
+			<li><a href="#/" ng-click='vm.utils.setCategory("ocio")'>ocio</a></li>
+			<li><a href="#/" ng-click='vm.utils.setCategory("deportes")'>deportes</a></li>
+		</ul>
+	</nav>
+	<div class=wrap>
+		<div ng-view></div>
+		<footer>
+			<p>trolléame</p>
+			<ul>
+				<li><a href="#">condiciones legales</a> &nbsp;/&nbsp; <a
+					href="#">de uso</a> &nbsp;/&nbsp; <a href="#">y de cookies</a>
+					&nbsp;/&nbsp;</li>
+				<li><a href="#">quiénes somos</a> &nbsp;/&nbsp;</li>
+				<li>licencias: <a href="https://www.meneame.net/COPYING">código,</a>
+					<a href="https://creativecommons.org/licenses/by-sa/3.0/">gráficos,</a>
+					<a href="https://creativecommons.org/licenses/by/3.0/es/">contenido</a>
+					&nbsp;/&nbsp;
+				</li>
+				<li><a href="">HTML5</a> &nbsp;/&nbsp;</li>
+				<li><a href="https://github.com/gallir/Meneame">código
+						fuente</a></li>
+			</ul>
+		</footer>
+	</div>
+</body>

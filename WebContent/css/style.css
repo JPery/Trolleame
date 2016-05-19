@@ -125,17 +125,19 @@ h2 a {
 .vota {
     position: relative;
     left: -6px;
-    display: inline-block;
     width: 78px;
     border: 1px solid #7CBFB7;
     background-color: #77d77d;
 }
 
-.vota a {
+.vota input {
+	cursor:pointer;
+	width:100%;
     display: block;
     padding: 2px 0;
-    height: 18px;
+    height: 25px;
     color: #007251;
+    font-size:1.1em;
     text-decoration: none;
     border: 1px solid #FFF;
     background: url('../img/back.png') repeat-x;
@@ -174,6 +176,9 @@ h2 a {
 .subido .submit_user {
     color: blue;
     font-weight: bold;
+}
+.submit_user_img img{
+height: 25px;
 }
 
 .details {
@@ -320,6 +325,32 @@ footer ul li a {
 
 footer ul li a:hover {
     text-decoration: underline;
+}
+
+.submitbutton {
+	border-radius: 3px;
+	border: none;
+	font-weight: bold;
+	margin: 4px 0;
+	padding: 2px 4px;
+	background-color: #216462;
+	color: #fff;
+}
+
+.submitbutton:hover {
+	background-color: #7CBFB7;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    padding: 2px 2px;
+    background: white;
+    border: 1px solid #ddd;
+    color: #303030;
+    display: block;
 }
 
 @media only screen and (max-width: 800px) {

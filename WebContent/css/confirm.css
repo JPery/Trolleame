@@ -1,0 +1,49 @@
+.confirm{
+	text-align:center;
+	margin-top: 20px;
+}
+.return{
+	text-decoration:underline;
+	color:#216462;
+	text-align:center;
+	font-weight:bold;
+}
+form.confirm{
+	display:inline;
+}
+input.accept {
+	border-radius: 3px;
+	border: none;
+	font-weight: bold;
+	margin: 4px 0;
+	padding: 2px 4px;
+	background-color: #216462;
+	color: #fff;
+}
+input.cancel{
+	border-radius: 3px;
+	border: none;
+	font-weight: bold;
+	margin: 4px 0;
+	padding: 2px 4px;
+	background-color: #216462;
+	color: #fff;
+	background-color: #e53a05;
+}
+
+input.accept:hover {
+	background-color: #7CBFB7;
+}
+input.cancel:hover{
+	background-color: #f86d72;
+}
+
+@media only screen and (max-width: 800px) {
+    h2 {
+        margin-top: 50px;
+    }
+    .wrap {
+        position: absolute;
+    }
+}
+}

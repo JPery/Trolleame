@@ -17,4 +17,5 @@ public interface CommentDAO {
 	public boolean save(Comment comment);
 	public boolean delete(long id);
 	public void setConnection(Connection conn);
+	public int getNumberCommentsbyNews(long newsID);
 }

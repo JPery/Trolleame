@@ -1,0 +1,19 @@
+<div class=formularioRegistro>
+	<div class=register>
+		<form ng-submit="vm.funciones.agregarUsuario()" method="post" class=registerForm>
+			<fieldset>
+				<legend>datos del usuario</legend>
+				<label for="user">nombre de usuario:</label> <input type="text"
+					name="user" id="user" ng-model="vm.usuario.name"> <label
+					for="email">email:</label> <span class=explicacion>es importante que sea
+					correcta, recibirás un correo para validar la cuenta</span> <input
+					type="text" id="email" name="email" ng-model="vm.usuario.email">
+				<label for="pass">clave:</label> <span class=explicacion>al menos ocho
+					caracteres, incluyendo letras y números </span> <input type="password"
+					ng-model="vm.usuario.password" id="pass"> <label for="pass">verificación
+					de clave:</label> <input type="password" ng-model="vm.usuario.verpass" id="verpass">
+				<input type="submit" value="crear usuario" class=submitbutton>
+			</fieldset>
+		</form>
+	</div>
+</div>

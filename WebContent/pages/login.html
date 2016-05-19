@@ -1,0 +1,56 @@
+		<div class=login ng-controller="loginCtrl as vm">
+			<section class=faq>
+				<h3>¿Qué es trolléame?</h3>
+				<p>Es un sitio que te permite enviar una historia troll que será
+					revisada por todos y será promovida, o no, a la página principal.
+					Cuando un usuario enví­a una historia ésta queda en la cola de
+					pendientes hasta que reúne los votos suficientes para ser promovida
+					a la página principal.</p>
+				<h3>¿Todaví­a no eres usuario de trolléame?</h3>
+				<p>Como usuario registrado podrás, entre otras cosas:</p>
+				<ul>
+					<li>Enviar historias</li>
+					<li class=listtext>
+						<p>Una vez registrado puedes enviar las historias que
+							consideres más trolls para la comunidad. Si tienes algún tipo de
+							duda sobre que tipo de historias troll puedes enviar, revisa
+							nuestras preguntas frecuentes sobre trolléame.</p>
+					</li>
+					<li>Escribir comentarios</li>
+					<li class=listtext>
+						<p>Puedes escribir tu opinión sobre las historias trolls
+							enviadas a trolléame mediante comentarios de texto. También
+							puedes votar positivamente aquellos comentarios ingeniosos,
+							divertidos o interesantes y negativamente aquellos que consideres
+							inoportunos.</p>
+					</li>
+					<li>Perfil de usuario</li>
+					<li class=listtext>
+						<p>Toda tu información como usuario troll está disponible
+							desde la página de tu perfil. También puedes subir una imagen que
+							representará a tu usuario en trolléame.</p>
+					</li>
+				</ul>
+				<h3>
+					<a href="#/registro">Regí­strate ahora</a>
+				</h3>
+			</section>
+			<div class=formulario>
+				<form method="post" ng-submit="vm.funciones.loginUser(vm.user);">
+					<fieldset>
+					<div class=error ng-show="vm.error!=undefined">{{vm.error}}</div>
+						<legend>
+							<span>usuario y contraseña</span>
+						</legend>
+						<label for="user">usuario o email:</label> <input type="text"
+							name="user" id="user" ng-model="vm.user.name"> <label for="pass">clave:</label> <input
+							type="password" name="pass" id="pass" ng-model="vm.user.password"> 
+						<div class=remember>
+							<label for="remember">recuérdame:</label> <input type="checkbox"
+								name="remember" id="remember">
+						</div>
+						<input type="submit" value="login" class="submitbutton">
+					</fieldset>
+				</form>
+			</div>
+		</div>

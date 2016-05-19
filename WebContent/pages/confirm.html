@@ -1,0 +1,11 @@
+<div class=confirm>
+<h2>
+	<span>¿Seguro que desea eliminar {{vm.mensaje}}?</span>
+</h2>
+<a ng-click='vm.funciones.back();'>
+	<input class="cancel" type="submit" value="cancelar">
+</a>
+<form ng-submit="vm.funciones.eliminar();" method="post" class="confirm">
+	<input class="accept" type="submit" value="aceptar">
+</form>
+</div>

@@ -1,0 +1,31 @@
+.errorHttp{
+	text-align:center;
+	margin-top: 20px;
+}
+.return{
+	text-decoration:underline;
+	color:#216462;
+	text-align:center;
+	font-weight:bold;
+}
+.errorh2{
+	color:#216462;
+	text-align:center;
+}
+
+.logoSad{
+	
+	display: block;
+    margin: 0 auto;
+    margin-bottom:20px;
+}
+
+@media only screen and (max-width: 800px) {
+    h2 {
+        margin-top: 50px;
+    }
+    .wrap {
+        position: absolute;
+    }
+}
+}

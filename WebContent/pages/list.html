@@ -1,0 +1,54 @@
+<article class=news-resumen ng-repeat="noticia in vm.noticias track by $index" ng-controller="listCtrl as vm" ng-click='$location.path("#/comments/{{noticia.id}}");'>
+					<div class=trolleos>
+						<div class=votos>
+							<a href="">{{noticia.likes}}</a>"trolleos"
+						</div>
+						<form class=vota ng-submit="vm.funciones.trollearNoticia()">
+							<input type="submit" value="trolléalo" class="trollbutton" ng-click="vm.noticiaTroll=noticia.id;noticia.likes=noticia.likes+1;">
+						</form>
+						<div class=clics>{{noticia.hits}} clics</div>
+					</div>
+
+					<div class=news>
+
+						<h2>
+							<a ng-href={{noticia.url}} ng-click="vm.noticiaClic=noticia.id;vm.funciones.clicNoticia();"> {{noticia.title}} </a>
+						</h2>
+						<div class=subido>
+							<a ng-href="#/profile/{{noticia.owner}}" class="submit_user_img"> <img
+								ng-src='{{noticia.imgUser}}' alt="">
+							</a>
+							<p>por</p>
+							<a ng-href="#/profile/{{noticia.owner}}" class="submit_user"> {{noticia.username}}
+							</a> <span> {{noticia.dateStamp}} </span> publicado: <span>{{noticia.timeAgo}}</span>
+						</div>
+						<a href="{{noticia.url}}" class=miniatura> <img
+							ng-src='{{noticia.img}}'
+							alt="">
+						</a>
+						<p>{{noticia.text}}</p>
+						<div class=details>
+							<strong>categoría</strong>: <span>{{noticia.category}}</span>
+							<div class="tool">
+								<strong class=wideonly><a href="">compartir</a>:</strong>
+								<div class=RS>
+									<a href="https://www.facebook.com/trolleamePI/"><img
+										src="./img/fb-24.png"
+										alt="facebook logo"></a> <a
+										href="https://twitter.com/TrolleamePI/"><img
+										src="./img/tw-24.png"
+										alt="twitter logo"></a>
+								</div>
+							</div>
+						</div>
+
+						<div class=details-main>
+							<span class=contadorcomentarios> <a
+								href="#/comments/{{noticia.id}}"> <span
+									class=contador> {{noticia.numComentarios}}
+								</span>comentarios
+							</a>
+							</span>
+						</div>
+					</div>
+</article>

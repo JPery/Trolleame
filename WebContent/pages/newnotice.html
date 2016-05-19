@@ -1,0 +1,36 @@
+<div class=formularioNoticia>
+	<div class=noticianueva>
+		<form method="post"
+			ng-submit="vm.funciones.editarNoticia(vm.noticia);">
+			<fieldset>
+				<div class=error ng-show="vm.error!=undefined">{{vm.error}}</div>
+				<legend>nueva noticia</legend>
+				<label for="url">url de la noticia:</label> <span
+					class="explicacion">se linkará al enlace que tú nos mandes</span> <input
+					ng-model="vm.noticia.url" type="url" id="url" name="url"
+					ng-value="vm.noticia.url" required> <label for="title">tí­tulo
+					de la noticia:</label> <span class="explicacion">tí­tulo de la
+					noticia. máximo: 120 caracteres</span> <input type="text"
+					ng-model="vm.noticia.title" id="title" name="title"
+					ng-value="vm.noticia.title" required> <label>imagen
+					de la noticia:</label> <span class="explicacion">sube tu imagen o
+					danos la url de la que tú elijas</span><input type="text" class="file"
+					name="file" id="file">
+				<div class="file_upload">
+					<input type="file" id="file_upload" name="file_upload">
+				</div>
+				<label>cuerpo de la noticia:</label>
+				<textarea class="escribirNoticia" name="text" id="text"
+					ng-model="vm.noticia.text"
+					placeholder="Da una breve descripción de la noticia" required>{{vm.noticia.text}}</textarea>
+				<label>categoría:</label> <select id="category" name="category"
+					ng-model="vm.noticia.category" required>
+					<option value="" disabled>-- Selecciona una --</option>
+					<option value="actualidad">actualidad</option>
+					<option value="ocio">ocio</option>
+					<option value="deportes">deportes</option>
+				</select> <input class="submitbutton" type="submit" value="enviar noticia">
+			</fieldset>
+		</form>
+	</div>
+</div>

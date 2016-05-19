@@ -1,0 +1,110 @@
+		<div ng-controller="commentsCtrl as vm">
+		<section class=news-resumen>
+			<div class=trolleos>
+
+				<div class=votos>
+					<a href="">{{vm.noticia.likes}}</a>"trolleos"
+				</div>
+				<form class=vota ng-submit="vm.funciones.trollearNoticia()">
+							<input type="submit" value="trolléalo" class="trollbutton" ng-click="vm.noticia.likes=vm.noticia.likes+1;">
+						</form>
+				<div class=clics>{{vm.noticia.hits}} clics</div>
+			</div>
+			<div class=news>
+
+				<h2>
+					<a ng-href="{{vm.noticia.url}}" ng-click="vm.funciones.clicNoticia();">{{vm.noticia.title}}</a>
+				</h2>
+				<div class=subido>
+					<a class="submit_user_img"> <img
+						ng-src='{{vm.noticia.imgUser}}'
+						alt="">
+					</a>
+					<p>por</p>
+					<a
+						href="#/profile/{{vm.noticia.owner}}"
+						class="submit_user">{{vm.noticia.username}}</a> <span>
+						{{vm.noticia.dateStamp}} </span> publicado: <span> {{vm.noticia.timeAgo}} </span>
+				</div>
+				<a ng-href="vm.noticia.url" class=miniatura> <img
+					ng-src='{{vm.noticia.img}}'
+					alt="">
+				</a>
+				<p>{{vm.noticia.text}}</p>
+				<div class=details>
+					<strong>categoría</strong>: <span>{{vm.noticia.category}}</span>
+					<div class="tool">
+						<strong class=wideonly><a href="">compartir</a>:</strong>
+						<div class=RS>
+							<a href="https://www.facebook.com/TrolleamePI/"><img
+								src="./img/fb-24.png"
+								alt="facebook logo"></a> <a
+								href="https://twitter.com/TrolleamePI/"><img
+								src="./img/tw-24.png"
+								alt="twitter logo"></a>
+						</div>
+					</div>
+				</div>
+				<div class=details-main>
+					<span class=contadorcomentarios> <a href=""> <span
+							class=contador>{{vm.noticia.numComentarios}}</span>comentarios
+					</a>
+					</span>
+						<div class=editar ng-show="$parent.$parent.vm.user.id==vm.noticia.owner">
+							<a
+								ng-href="#/editarNoticia/{{vm.noticia.id}}">editar</a>
+						</div>
+						<div class=editar ng-show="$parent.$parent.vm.user.id==vm.noticia.owner">
+							<a
+								ng-href="#/deleteNews/{{vm.noticia.id}}">eliminar</a>
+						</div>
+				</div>
+			</div>
+		</section>
+
+			<div class=comentarios ng-show="($parent.$parent.vm.user.id==-1 && vm.noticia.numComentarios>0) || $parent.$parent.vm.user.id!=-1">
+					<div class=escribircomentario ng-show="$parent.$parent.vm.user.id!=-1">
+							<!--<div class=error>${messages.error}</div>-->
+						<form method="post" ng-submit="vm.funciones.agregarComentario();">
+							<textarea class=escribir name="text" id="text" ng-model="vm.comentario.text"
+								placeholder="Escribe aquí tu comentario" required></textarea>
+							<input class="submitbutton" type="submit" value="enviar comentario">
+						</form>
+
+					</div>
+				<div ng-repeat="comentario in vm.comentarios track by $index">
+					<div class=comentariodatos>
+						<div class=comentario>
+							<div class=comentariousuario>
+								<a ng-href="profile/{{comentario.owner}}" class="submit_user_img">
+									<img
+									ng-src='{{comentario.imgUser}}'
+									alt="">
+								</a> <a
+									ng-href="#/profile/{{comentario.owner}}"
+									class=submit_user> {{comentario.username}} </a> {{comentario.timeAgo}}
+							</div>
+						</div>
+						<div class=comentariotexto>
+							<p>{{comentario.text}}</p>
+								<div class=editar ng-show="$parent.$parent.$parent.vm.user.id == comentario.owner">
+									<i onclick="visual.funciones.showEditForm(this);" ng-click="$parent.vm.funciones.setValues(comentario.text, comentario.id);">editar</i>
+								</div>
+								<div class=editar ng-show="$parent.$parent.$parent.vm.user.id == comentario.owner">
+									<a
+										ng-href="#/deleteComments/{{comentario.id}}">eliminar</a>
+								</div>
+						</div>
+						<div class="formularioEditar">
+							<form class="edit-comment-form" ng-submit="vm.funciones.cambiarComentario();"
+                                method="post">
+                                <textarea class="edit-comment-textarea" ng-model="$parent.vm.comentarioEditado.text" name="text" required></textarea>
+                                <div class="formbutton">
+                                	<input class="submitbutton" type="submit" value="editar comentario">
+                                </div>
+                        </form>
+                        </div>
+					</div>
+				</div>
+			</div>
+			</div>

@@ -68,14 +68,6 @@
             display: inline-block;
         }
         
-        li a:hover:not(.active) {
-            background: url('../img/nav-white.png') bottom left repeat-x;
-        }
-        
-        .active {
-            background: url('../img/nav-white.png') bottom left repeat-x;
-        }
-        
         .navimg {
             margin: 0 5px 0 5px;
             float: left;
@@ -276,7 +268,6 @@
         }
         
         #header-bottom ul {
-            width: 50%;
             margin: auto;
             list-style-type: none;
             padding: 0;

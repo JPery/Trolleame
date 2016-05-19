@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
+import helper.EncryptHelper;
 import model.User;
 
 public class JDBCUserDAOImpl implements UserDAO {
@@ -30,6 +31,7 @@ public class JDBCUserDAOImpl implements UserDAO {
 			user.setName(rs.getString("name"));
 			user.setEmail(rs.getString("email"));
 			user.setPassword(rs.getString("password"));
+			user.setImg(rs.getString("img"));
 			logger.info("fetching User by id: "+id+" -> "+user.getId()+" "+user.getName()+" "+user.getEmail()+" "+user.getPassword());
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -53,6 +55,7 @@ public class JDBCUserDAOImpl implements UserDAO {
 			user.setName(rs.getString("name"));
 			user.setEmail(rs.getString("email"));
 			user.setPassword(rs.getString("password"));
+			user.setImg(rs.getString("img"));
 			logger.info("fetching User by name: "+ name + " -> "+ user.getId()+" "+user.getName()+" "+user.getEmail()+" "+user.getPassword());
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -80,7 +83,7 @@ public class JDBCUserDAOImpl implements UserDAO {
 				user.setName(rs.getString("name"));
 				user.setEmail(rs.getString("email"));
 				user.setPassword(rs.getString("password"));
-				
+				user.setImg(rs.getString("img"));
 				
 				users.add(user);
 				logger.info("fetching users: "+user.getId()+" "+user.getName()+" "+user.getEmail()+" "+user.getPassword());
@@ -99,14 +102,15 @@ public class JDBCUserDAOImpl implements UserDAO {
 	public long add(User user) {
 		long id=-1;
 		if (conn != null){
-
+			user.setPassword(EncryptHelper.sha256(user.getPassword()));
 			Statement stmt;
 			try {
 				stmt = conn.createStatement();
-				stmt.executeUpdate("INSERT INTO User (name,email,password) VALUES('"
+				stmt.executeUpdate("INSERT INTO User (name,email,password,img) VALUES('"
 									+user.getName()+"','"
 									+user.getEmail()+"','"
-									+user.getPassword()+"')",Statement.RETURN_GENERATED_KEYS);
+									+user.getPassword()+"','"
+									+user.getImg()+"')",Statement.RETURN_GENERATED_KEYS);
 				
 				ResultSet genKeys = stmt.getGeneratedKeys();
 				
@@ -127,13 +131,13 @@ public class JDBCUserDAOImpl implements UserDAO {
 	public boolean save(User user) {
 		boolean done = false;
 		if (conn != null){
-			
 			Statement stmt;
 			try {
 				stmt = conn.createStatement();
 				stmt.executeUpdate("UPDATE User SET name='"+user.getName()
 									+"', email='"+user.getEmail()
 									+"', password='"+user.getPassword()
+									+"', img='"+user.getImg()
 									+"' WHERE id = "+user.getId());
 				logger.info("updating User: "+user.getId()+" "+user.getName()+" "+user.getEmail()+" "+user.getPassword());
 				done= true;
@@ -170,6 +174,29 @@ public class JDBCUserDAOImpl implements UserDAO {
 	public void setConnection(Connection conn) {
 		// TODO Auto-generated method stub
 		this.conn = conn;
+	}
+
+	@Override
+	public User getByEmail(String email) {
+if (conn == null) return null;
+		
+		User user = null;		
+		
+		try {
+			Statement stmt = conn.createStatement();
+			ResultSet rs = stmt.executeQuery("SELECT * FROM Public.User WHERE email ='"+email+"'");			 
+			if (!rs.next()) return null; 
+			user  = new User();	 
+			user.setId(rs.getLong("id"));
+			user.setName(rs.getString("name"));
+			user.setEmail(rs.getString("email"));
+			user.setPassword(rs.getString("password"));
+			user.setImg(rs.getString("img"));
+			logger.info("fetching User by email: "+ email + " -> "+ user.getId()+" "+user.getName()+" "+user.getEmail()+" "+user.getPassword());
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return user;
 	}
 
 	
