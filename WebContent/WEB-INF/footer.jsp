@@ -6,6 +6,6 @@
 			<a href="https://creativecommons.org/licenses/by/3.0/es/">contenido</a>
 			&nbsp;/&nbsp;
 		</li>
-		<li><a href="https://github.com/gallir/Meneame">código fuente</a></li>
+		<li><a href="https://github.com/JPery/Trolleame">código fuente</a></li>
 	</ul>
 </footer>
