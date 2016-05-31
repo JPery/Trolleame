@@ -37,6 +37,7 @@ app.controller(
 										// acciones a realizar
 										// cuando se recibe una
 										// respuesta de error
+										vm.error="Alguno de los campos no cumple los requisitos";
 										console.log("Error: cambio de noticia no realizado");
 									})
 								}else{vm.error="Selecciona una categoría";}
@@ -58,6 +59,7 @@ app.controller(
 										// acciones a realizar
 										// cuando se recibe una
 										// respuesta de error
+										vm.error="Alguno de los campos no cumple los requisitos";
 										console.log("Error: inserción de noticia no realizado");
 									})
 								}else{vm.error="Selecciona una categoría";}

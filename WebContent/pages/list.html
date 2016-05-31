@@ -1,4 +1,5 @@
-<article class=news-resumen ng-repeat="noticia in vm.noticias track by $index" ng-controller="listCtrl as vm" ng-click='$location.path("#/comments/{{noticia.id}}");'>
+<article class=news-resumen ng-repeat="noticia in vm.noticias track by $index" ng-controller="listCtrl as vm">
+			<div class='location' ng-click='vm.funciones.changeLocation(noticia.id);'>
 					<div class=trolleos>
 						<div class=votos>
 							<a href="">{{noticia.likes}}</a>"trolleos"
@@ -50,5 +51,6 @@
 							</a>
 							</span>
 						</div>
+					</div>
 					</div>
 </article>

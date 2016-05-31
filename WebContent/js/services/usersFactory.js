@@ -1,5 +1,5 @@
 app.factory("usersFactory", ['$http',function($http){
-   var url = 'http://localhost:8080/Trolleame/rest/users/';
+   var url = 'https://localhost:8443/Trolleame/rest/users/';
     var interfaz = {
     	     leerUser : function(){
     	    	 var urlU=url+"session";
@@ -20,6 +20,14 @@ app.factory("usersFactory", ['$http',function($http){
     		newUser : function(user){
     			url = url;
     				return $http.post(url,user)
+                    .then(function(response){
+                    	 return response.status;
+    				 });
+    		},
+    		editUser : function(user){
+    			url = url;
+    			urlU=url+user.id;
+    				return $http.put(urlU,user)
                     .then(function(response){
                     	 return response.status;
     				 });

@@ -44,7 +44,7 @@
 							<input type="file" id="file_upload" name="file_upload">
 						</div>
 						<label>cuerpo de la noticia:</label>
-						<textarea class=escribir name="text" id="text"
+						<textarea class="escribirNoticia" name="text" id="text"
 							placeholder="Da una breve descripción de la noticia" required>${noticia.text}</textarea>
 						<label>categoría:</label> <select id="category" name="category"
 							required>
@@ -63,23 +63,7 @@
 				</form>
 			</div>
 		</div>
-		<footer>
-			<p>trolléame</p>
-			<ul>
-				<li><a href="#">condiciones legales</a> &nbsp;/&nbsp; <a
-					href="#">de uso</a> &nbsp;/&nbsp; <a href="#">y de cookies</a>
-					&nbsp;/&nbsp;</li>
-				<li><a href="#">quiénes somos</a> &nbsp;/&nbsp;</li>
-				<li>licencias: <a href="https://www.meneame.net/COPYING">código,</a>
-					<a href="https://creativecommons.org/licenses/by-sa/3.0/">gráficos,</a>
-					<a href="https://creativecommons.org/licenses/by/3.0/es/">contenido</a>
-					&nbsp;/&nbsp;
-				</li>
-				<li><a href="">HTML5</a> &nbsp;/&nbsp;</li>
-				<li><a href="https://github.com/gallir/Meneame">código
-						fuente</a></li>
-			</ul>
-		</footer>
+		<jsp:include page="/WEB-INF/footer.jsp" />
 	</div>
 </body>
 

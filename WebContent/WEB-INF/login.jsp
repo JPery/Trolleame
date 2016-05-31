@@ -68,29 +68,12 @@
 						<label for="user">usuario o email:</label> <input type="text"
 							name="user" id="user"> <label for="pass">clave:</label> <input
 							type="password" name="pass" id="pass">
-						<div class=remember>
-							<label for="remember">recuérdame:</label> <input type="checkbox"
-								name="remember" id="remember">
-						</div>
-						<input type="submit" value="login">
+						<input type="submit" value="login" class="submitbutton">
 					</fieldset>
 				</form>
 			</div>
 		</div>
-		<footer>
-			<p>trolléame</p>
-			<ul>
-				<li><a href="">condiciones legales</a> &nbsp;/&nbsp; <a href="">de
-						uso</a> &nbsp;/&nbsp; <a href="">y de cookies</a> &nbsp;/&nbsp;</li>
-				<li><a href="">quiénes somos</a> &nbsp;/&nbsp;</li>
-				<li>licencias: <a href="">código,</a> <a href="">gráficos,</a>
-					<a href="">contenido</a> &nbsp;/&nbsp;
-				</li>
-				<li><a href="">HTML5</a> &nbsp;/&nbsp;</li>
-				<li><a href="https://github.com/gallir/Meneame">código
-						fuente</a></li>
-			</ul>
-		</footer>
+		<jsp:include page="/WEB-INF/footer.jsp" />
 	</div>
 </body>
 

@@ -1,5 +1,5 @@
 app.factory("newsFactory",['$http', function($http){
-   var url = 'http://localhost:8080/Trolleame/rest/news/';
+   var url = 'https://localhost:8443/Trolleame/rest/news/';
     var interfaz = {	
     		 leerNoticias: function(utils){
     			 if ((utils.getCategory() == "" || utils.getCategory()===undefined) && (utils.getView() == "" || utils.getView()===undefined)){

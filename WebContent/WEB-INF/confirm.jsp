@@ -23,29 +23,18 @@
 <body>
 	<jsp:include page="/WEB-INF/navbar.jsp" />
 	<div class=wrap>
+		<div class=confirm>
 		<h2>
 			<span>${message}</span>
 		</h2>
 		<a href="${pageContext.request.contextPath}/comentarios?id=${id}" >
 			<input class="cancel" type="submit" value="cancelar">
 		</a>
-		<form action="" method="post">
-			<input type="submit" value="aceptar">
+		<form action="" method="post" class="confirm">
+			<input type="submit" value="aceptar" class="submitbutton">
 		</form>
-		<footer>
-			<p>trolléame</p>
-			<ul>
-				<li><a href="">condiciones legales</a> &nbsp;/&nbsp; <a href="">de
-						uso</a> &nbsp;/&nbsp; <a href="">y de cookies</a> &nbsp;/&nbsp;</li>
-				<li><a href="">quiénes somos</a> &nbsp;/&nbsp;</li>
-				<li>licencias: <a href="">código,</a> <a href="">gráficos,</a>
-					<a href="">contenido</a> &nbsp;/&nbsp;
-				</li>
-				<li><a href="">HTML5</a> &nbsp;/&nbsp;</li>
-				<li><a href="https://github.com/gallir/Meneame">código
-						fuente</a></li>
-			</ul>
-		</footer>
+		</div>
+		<jsp:include page="/WEB-INF/footer.jsp" />
 	</div>
 </body>
 

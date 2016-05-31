@@ -18,6 +18,15 @@
       <servlet-name>JerseyRESTService</servlet-name>
       <url-pattern>/rest/*</url-pattern>
     </servlet-mapping>
+    <security-constraint> 
+        <web-resource-collection>
+            <web-resource-name>Entire Application</web-resource-name>
+                <url-pattern>/*</url-pattern>
+            </web-resource-collection>
+        <user-data-constraint>
+              <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
    	<error-page>
     	<error-code>404</error-code>
         	<location>/WEB-INF/404.jsp</location>

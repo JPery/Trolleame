@@ -1,7 +1,8 @@
 <div class=formularioRegistro>
 	<div class=register>
-		<form ng-submit="vm.funciones.agregarUsuario()" method="post" class=registerForm>
+		<form ng-submit="vm.funciones.editarUsuario()" method="post" class=registerForm>
 			<fieldset>
+				<div class=error ng-show="vm.error!=undefined">{{vm.error}}</div>
 				<legend>datos del usuario</legend>
 				<label for="user">nombre de usuario:</label> <input type="text"
 					name="user" id="user" ng-model="vm.usuario.name"> <label

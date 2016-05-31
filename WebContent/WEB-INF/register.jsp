@@ -19,18 +19,18 @@
 <body>
 	<jsp:include page="/WEB-INF/navbar.jsp" />
 	<div class=wrap>
-		<div class=formulario>
+		<div class=formularioRegistro>
 			<div class=register>
-				<form action="register" method="post">
+				<form action="" method="post" class=registerForm>
 					<fieldset>
 						<legend>datos del usuario</legend>
 						<c:if test="${messages != null}">
 							<div class=error>${messages.error }</div>
 						</c:if>
 						<label for="user">nombre de usuario:</label> <input type="text"
-							name="user" id="user" value="${usuario.name}"> <label for="email">email:</label>
+							name="user" id="user" value="${user.name}"> <label for="email">email:</label>
 						<span>es importante que sea correcta, recibirás un correo
-							para validar la cuenta</span> <input type="text" id="email" name="email" value="${usuario.email}">
+							para validar la cuenta</span> <input type="text" id="email" name="email" value="${user.email}">
 						<label for="pass">clave:</label> <span>al menos ocho
 							caracteres, incluyendo letras y números </span> <input type="password"
 							name="pass" id="pass"> <label for="pass">verificación
@@ -40,23 +40,7 @@
 				</form>
 			</div>
 		</div>
-		<footer>
-			<p>trolléame</p>
-			<ul>
-				<li><a href="#">condiciones legales</a> &nbsp;/&nbsp; <a
-					href="#">de uso</a> &nbsp;/&nbsp; <a href="#">y de cookies</a>
-					&nbsp;/&nbsp;</li>
-				<li><a href="#">quiénes somos</a> &nbsp;/&nbsp;</li>
-				<li>licencias: <a href="https://www.meneame.net/COPYING">código,</a>
-					<a href="https://creativecommons.org/licenses/by-sa/3.0/">gráficos,</a>
-					<a href="https://creativecommons.org/licenses/by/3.0/es/">contenido</a>
-					&nbsp;/&nbsp;
-				</li>
-				<li><a href="">HTML5</a> &nbsp;/&nbsp;</li>
-				<li><a href="https://github.com/gallir/Meneame">código
-						fuente</a></li>
-			</ul>
-		</footer>
+		<jsp:include page="/WEB-INF/footer.jsp" />
 	</div>
 </body>
 

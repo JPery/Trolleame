@@ -27,33 +27,18 @@
 						<c:if test="${messages!=null}">
 							<div class="error">${messages.error}</div>
 						</c:if>
-						<label>subir imagen:</label> <span>sube tu imagen o danos la url de la que tú elijas</span><input <c:if test="${user.img!=null && user.img!='null'}">value="${user.img}"</c:if> type="text" class="file" name="file"
+						<label>subir imagen:</label> <span class="explicacion">sube tu imagen o danos la url de la que tú elijas</span>
+						<input <c:if test="${user.img!=null && user.img!='null'}">value="${user.img}"</c:if> type="text" class="file" name="file"
 							id="file">
 						<div class="file_upload">
 							<input type="file" id="file_upload" name="file_upload">
 						</div>
-						<input type="submit" value="guardar imagen">
+						<input type="submit" value="guardar imagen" class="submitbutton">
 					</fieldset>
 				</form>
 			</div>
 		</div>
-		<footer>
-			<p>trolléame</p>
-			<ul>
-				<li><a href="#">condiciones legales</a> &nbsp;/&nbsp; <a
-					href="#">de uso</a> &nbsp;/&nbsp; <a href="#">y de cookies</a>
-					&nbsp;/&nbsp;</li>
-				<li><a href="#">quiénes somos</a> &nbsp;/&nbsp;</li>
-				<li>licencias: <a href="https://www.meneame.net/COPYING">código,</a>
-					<a href="https://creativecommons.org/licenses/by-sa/3.0/">gráficos,</a>
-					<a href="https://creativecommons.org/licenses/by/3.0/es/">contenido</a>
-					&nbsp;/&nbsp;
-				</li>
-				<li><a href="">HTML5</a> &nbsp;/&nbsp;</li>
-				<li><a href="https://github.com/gallir/Meneame">código
-						fuente</a></li>
-			</ul>
-		</footer>
+		<jsp:include page="/WEB-INF/footer.jsp" />
 	</div>
 </body>
 

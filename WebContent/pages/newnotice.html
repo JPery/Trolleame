@@ -12,13 +12,7 @@
 					de la noticia:</label> <span class="explicacion">tí­tulo de la
 					noticia. máximo: 120 caracteres</span> <input type="text"
 					ng-model="vm.noticia.title" id="title" name="title"
-					ng-value="vm.noticia.title" required> <label>imagen
-					de la noticia:</label> <span class="explicacion">sube tu imagen o
-					danos la url de la que tú elijas</span><input type="text" class="file"
-					name="file" id="file">
-				<div class="file_upload">
-					<input type="file" id="file_upload" name="file_upload">
-				</div>
+					ng-value="vm.noticia.title" required>
 				<label>cuerpo de la noticia:</label>
 				<textarea class="escribirNoticia" name="text" id="text"
 					ng-model="vm.noticia.text"
@@ -29,7 +23,10 @@
 					<option value="actualidad">actualidad</option>
 					<option value="ocio">ocio</option>
 					<option value="deportes">deportes</option>
-				</select> <input class="submitbutton" type="submit" value="enviar noticia">
+				</select>
+				<input class="submitbutton" type="submit" value="enviar noticia">
+				<span class="explicacion" ng-show="vm.funciones.estoy('/nuevaNoticia')">si quieres subir tu noticia con una imagen haz click <a  href="/Trolleame/private/nuevanoticia">aquí</a></span>
+				<span class="explicacion" ng-show="vm.funciones.estoy('/editarNoticia/'+vm.noticia.id)" >si quieres ponerle una imagen a tu noticia haz click <a ng-href="/Trolleame/private/editar?id={{vm.noticia.id}}">aquí</a></span>
 			</fieldset>
 		</form>
 	</div>

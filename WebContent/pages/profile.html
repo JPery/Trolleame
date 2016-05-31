@@ -1,8 +1,10 @@
 <div class="profile">
-	<img ng-src="{{vm.profile.img}}" alt="imagen del usuario" />
+	<a ng-show="$parent.vm.user.id==vm.profile.id" href="/Trolleame/private/editProfile" class="image-holder"><img ng-src="{{vm.profile.img}}" alt="imagen del usuario" /></a>
+	<img ng-show="$parent.vm.user.id!=vm.profile.id" ng-src="{{vm.profile.img}}" alt="imagen del usuario" />
 	<div class="text">
 		<h2>{{vm.profile.name}}</h2>
 		<h3 ng-show="$parent.vm.user.id==vm.profile.id">{{vm.profile.email}}</h3>
 		<a ng-show="$parent.vm.user.id==vm.profile.id" class=editarPerfil ng-href="#/deleteUser/{{vm.profile.id}}">eliminar</a>
+		<a ng-show="$parent.vm.user.id==vm.profile.id" class=editarPerfil ng-href="#/editUser/{{vm.profile.id}}">editar</a>
 	</div>
 </div>

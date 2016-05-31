@@ -80,6 +80,9 @@ public class UsersResource {
 		userDao.setConnection(conn);
 		// Comprobamos que existe el usuario
 		User user = userDao.get(userUpdate.getName());
+		if(user==null){
+			user = userDao.getByEmail(userUpdate.getName());
+		}
 		if (user != null && user.getPassword().equals(userUpdate.getPassword())) {
 			HttpSession session = request.getSession();
 			session.setAttribute("user", user);

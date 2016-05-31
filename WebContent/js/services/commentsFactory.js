@@ -1,5 +1,5 @@
 app.factory("commentsFactory", [ '$http', function($http) {
-	var url = 'http://localhost:8080/Trolleame/rest/comments/';
+	var url = 'https://localhost:8443/Trolleame/rest/comments/';
 	var interfaz = {
 		getComentario : function($id){
 			urlU = url + $id;

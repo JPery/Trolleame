@@ -18,25 +18,14 @@
 
 <body>
 	<div class=wrap>
-		<h2>
+		<div class=errorHttp>
+		<h2 class=errorh2>
 			<span>Error 500:</span> Algo ha ido mal
 		</h2>
 		<img class="logoSad" alt="" src="${pageContext.request.contextPath}/img/500.png">
 		<a href="${pageContext.request.contextPath}/index" class="return">Volver a la página principal</a>
-		<footer>
-			<p>trolléame</p>
-			<ul>
-				<li><a href="">condiciones legales</a> &nbsp;/&nbsp; <a href="">de
-						uso</a> &nbsp;/&nbsp; <a href="">y de cookies</a> &nbsp;/&nbsp;</li>
-				<li><a href="">quiénes somos</a> &nbsp;/&nbsp;</li>
-				<li>licencias: <a href="">código,</a> <a href="">gráficos,</a>
-					<a href="">contenido</a> &nbsp;/&nbsp;
-				</li>
-				<li><a href="">HTML5</a> &nbsp;/&nbsp;</li>
-				<li><a href="https://github.com/gallir/Meneame">código
-						fuente</a></li>
-			</ul>
-		</footer>
+		</div>
+		<jsp:include page="/WEB-INF/footer.jsp" />
 	</div>
 </body>
 

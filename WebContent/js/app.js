@@ -55,7 +55,11 @@ var app = angular.module('TrolleameApp', [ "ngRoute" ]).config(
 				controller : "registerCtrl",
 				controllerAs : "vm",
 				templateUrl : "pages/register.html"
+			}).when("/editUser/:ID", {
+				controller : "registerCtrl",
+				controllerAs : "vm",
+				templateUrl : "pages/register.html"
 			}).when("/403", {
 				templateUrl : "pages/403.html"
-			}).otherwise({templateUrl:'pages/404.html'});;
+			}).otherwise({templateUrl:'pages/404.html'});
 		});

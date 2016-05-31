@@ -1,4 +1,4 @@
-app.controller("listCtrl",['newsFactory','usersFactory','commentsFactory', 'utils','$route', function(newsFactory,usersFactory,commentsFactory, utils,$route){
+app.controller("listCtrl",['newsFactory','usersFactory','commentsFactory', 'utils','$route','$location', function(newsFactory,usersFactory,commentsFactory, utils,$route,$location){
     var vm = this;
     vm.noticias=[];
     vm.noticiaTroll;
@@ -45,6 +45,9 @@ app.controller("listCtrl",['newsFactory','usersFactory','commentsFactory', 'util
     	},
     	clicNoticia : function(){
     		newsFactory.clicNoticia(vm.noticiaClic);
+    	},
+    	changeLocation : function(id){
+    		$location.path('/comments/'+id);
     	}
 	}
 	vm.funciones.obtenerNoticias();
